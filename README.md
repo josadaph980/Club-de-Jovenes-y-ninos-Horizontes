@@ -52,6 +52,8 @@ Abrir `siteData.js`, buscar `socials` y pegar la URL oficial de cada perfil entr
 El formulario es el código oficial de Donorbox, pegado en `index.html` (sección Donaciones). Si el navegador lo bloquea, hay un enlace alterno. Donorbox y su procesador de pagos gestionan el pago.
 
 ## Publicar gratis en GitHub Pages (pendiente)
+> **Versión de prueba:** `index.html` tiene `<meta name="robots" content="noindex, nofollow">` para que Google no muestre la página. Cuando el sitio sea oficial, borrar esa línea (y su comentario) para que aparezca en Google.
+
 1. Crear un repositorio **público** y subir el contenido de esta carpeta (sin documentos internos).
 2. En *Settings → Pages*, elegir la rama `main` y la carpeta raíz.
 3. La dirección será `https://USUARIO.github.io/NOMBRE-DEL-REPOSITORIO/`.
