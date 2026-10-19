@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="es-CR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fundación Club de Jóvenes y Niños Horizontes (CJNH) · San Rafael de Alajuela</title>
+  <meta name="description" content="Desde 2017, la Fundación Club de Jóvenes y Niños Horizontes (CJNH) promueve oportunidades de desarrollo para niños, niñas, adolescentes y sus familias en Barrio Lourdes, San Rafael de Alajuela, Costa Rica. Conoce su labor, dona o participa como voluntario/a.">
+  <meta name="theme-color" content="#00D1C6">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CR">
+  <meta property="og:title" content="Fundación Club de Jóvenes y Niños Horizontes (CJNH)">
+  <meta property="og:description" content="Permítete ser una explosión de color. Actividades formativas, recreativas y comunitarias para la niñez y la adolescencia en San Rafael de Alajuela, Costa Rica.">
+  <!-- Evita la petición automática de /favicon.ico hasta que haya logo oficial -->
+  <link rel="icon" href="data:,">
+  <script>
+    document.documentElement.classList.add('js');
+    /* Tema: respeta la elección guardada; si no hay, usa el del sistema. */
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('cjnh-theme'); } catch (e) {}
+      if (t !== 'dark' && t !== 'light') {
+        t = (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <!-- Datos estructurados para Google. Mantener iguales a siteData.js. Al tener dominio: agregar "url", "logo" y "sameAs" (redes). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "Fundación Club de Jóvenes y Niños Horizontes",
+    "alternateName": "CJNH",
+    "description": "Fundación que promueve oportunidades de desarrollo para niños, niñas, adolescentes y sus familias en Barrio Lourdes, San Rafael de Alajuela, Costa Rica.",
+    "foundingDate": "2017-03-07",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Barrio Lourdes",
+      "addressLocality": "San Rafael",
+      "addressRegion": "Alajuela",
+      "addressCountry": "CR"
+    },
+    "email": "cjnh17@gmail.com",
+    "telephone": "+50688213539"
+  }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===================== ENCABEZADO ===================== -->
+  <header class="site-header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#inicio" aria-label="Fundación CJNH, ir al inicio">
+        <span class="brand__mark" data-logo></span>
+        <span class="brand__text">
+          <span class="brand__name">Fundación CJNH</span>
+          <span class="brand__sub">Club de Jóvenes y Niños Horizontes</span>
+        </span>
+      </a>
+
+      <div class="header__tools">
+        <button class="theme-toggle" type="button" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7Z" fill="currentColor"/></svg>
+          <span class="visually-hidden">Modo oscuro</span>
+        </button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+          <span class="menu-toggle__bars" aria-hidden="true"></span>
+          <span class="menu-toggle__label">Menú</span>
+        </button>
+      </div>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Principal">
+        <ul class="site-nav__list">
+          <li class="nav-home"><a href="#inicio">Inicio</a></li>
+          <li><a href="#mision-vision">Misión y visión</a></li>
+          <li><a href="#historia">Nuestra historia</a></li>
+          <li><a href="#como-trabajamos">Cómo trabajamos</a></li>
+          <li><a href="#que-hacemos">Qué hacemos</a></li>
+          <li><a href="#campamentos">Campamentos</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#impacto">Nuestro impacto</a></li>
+          <li><a href="#junta">Directores</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__cta">
+        <a class="btn btn--donate" href="#donaciones">Donar</a>
+        <a class="btn btn--volunteer" href="#voluntariado">Ser voluntario/a</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+
+    <!-- ===================== PORTADA ===================== -->
+    <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+      <!-- Decoración: sol saliendo sobre colinas ("Horizontes"). No representa personas. -->
+      <svg class="hero__art" viewBox="0 0 1200 380" preserveAspectRatio="xMidYMax slice" role="group" aria-label="Ilustración: personas de distintas edades celebrando frente al sol. Cada persona tiene un mensaje.">
+      <!-- Ilustración original: sol saliendo entre colinas angulares y siluetas de personas de distintas edades
+           (niña o niño, joven, adulto, persona mayor con bastón y persona usuaria de silla de ruedas).
+           Dibujo propio; no es el logo ni copia de ninguna imagen. -->
+      <g class="hills-back" aria-hidden="true"><path class="hill-1" d="M0 380V318L150 268L300 322L470 286L620 330L780 276L940 322L1080 282L1200 312V380Z"/></g>
+      <g class="sun" aria-hidden="true">
+        <g class="sun-core">
+          <circle class="s-glow" cx="600" cy="350" r="250"/>
+          <circle class="s-1" cx="600" cy="350" r="196"/>
+          <circle class="s-2" cx="600" cy="350" r="146"/>
+          <circle class="s-3" cx="600" cy="350" r="98"/>
+          <circle class="s-4" cx="600" cy="350" r="52"/>
+        </g>
+        <g class="sun-rays">
+          <line class="s-ray" x1="338.6" y1="331.7" x2="250.9" y2="325.6"/>
+          <line class="s-ray" x1="346.9" y1="282.2" x2="289.0" y2="266.7"/>
+          <line class="s-ray" x1="364.5" y1="235.1" x2="285.4" y2="196.6"/>
+          <line class="s-ray" x1="390.8" y1="192.3" x2="342.8" y2="156.2"/>
+          <line class="s-ray" x1="424.7" y1="155.3" x2="365.8" y2="89.9"/>
+          <line class="s-ray" x1="465.1" y1="125.4" x2="434.2" y2="74.0"/>
+          <line class="s-ray" x1="510.4" y1="103.8" x2="480.3" y2="21.1"/>
+          <line class="s-ray" x1="559.0" y1="91.2" x2="549.6" y2="32.0"/>
+          <line class="s-ray" x1="609.1" y1="88.2" x2="612.2" y2="0.2"/>
+          <line class="s-ray" x1="658.9" y1="94.7" x2="672.4" y2="36.3"/>
+          <line class="s-ray" x1="706.6" y1="110.7" x2="742.4" y2="30.3"/>
+          <line class="s-ray" x1="750.3" y1="135.4" x2="784.7" y2="86.2"/>
+          <line class="s-ray" x1="788.5" y1="168.0" x2="851.8" y2="106.9"/>
+          <line class="s-ray" x1="819.7" y1="207.3" x2="870.1" y2="174.6"/>
+          <line class="s-ray" x1="842.9" y1="251.9" x2="924.5" y2="218.9"/>
+          <line class="s-ray" x1="857.2" y1="300.0" x2="916.1" y2="288.6"/>
+        </g>
+      </g>
+      <g class="confetti">
+        <circle class="conf-a" cx="300" cy="250" r="5.0"/>
+        <rect class="conf-b" x="331.0" y="204.0" width="8" height="8" transform="rotate(20 335 208)"/>
+        <rect class="conf-c" x="250.5" y="295.5" width="9" height="9" transform="rotate(20 255 300)"/>
+        <circle class="conf-d" cx="905" cy="232" r="5.0"/>
+        <rect class="conf-e" x="941.0" y="281.0" width="8" height="8" transform="rotate(20 945 285)"/>
+        <rect class="conf-a" x="876.0" y="296.0" width="8" height="8" transform="rotate(20 880 300)"/>
+        <circle class="conf-b" cx="690" cy="150" r="4.5"/>
+        <rect class="conf-c" x="516.0" y="136.0" width="8" height="8" transform="rotate(20 520 140)"/>
+        <circle class="conf-d" cx="660" cy="252" r="3.0"/>
+        <rect class="conf-e" x="407.0" y="255.0" width="6" height="6" transform="rotate(20 410 258)"/>
+        <rect class="conf-a" x="1005.5" y="325.5" width="9" height="9" transform="rotate(20 1010 330)"/>
+        <circle class="conf-c" cx="190" cy="320" r="4.0"/>
+      </g>
+      <path class="hill-2" d="M0 380V338Q300 304 600 334T1200 322V380Z"/>
+      <g class="people">
+        <g transform="translate(326 346)"><g class="fig fig--1" tabindex="0" role="img" aria-label="Cada generación tiene algo que enseñar." data-msg="Cada generación tiene algo que enseñar."><rect class="fig-hit" x="-38" y="-132" width="70" height="132"/><g class="sway"><path class="pf" d="M-14.2 -60.5 L-15.5 -32.4 A4 4 0 0 0 -7.5 -31.6 L-3.8 -59.5 A5.2 5.2 0 0 0 -14.2 -60.5Z"/><path class="pf" d="M-15.3 -32.1 L-14.7 -4 A2.7 2.7 0 0 0 -9.3 -4 L-7.7 -31.9 A3.8 3.8 0 0 0 -15.3 -32.1Z"/><path class="pf" d="M-1.2 -59.4 L3.5 -30.5 A4 4 0 0 0 11.5 -31.5 L9.2 -60.6 A5.2 5.2 0 0 0 -1.2 -59.4Z"/><path class="pf" d="M3.7 -30.9 L5.3 -4 A2.7 2.7 0 0 0 10.7 -4 L11.3 -31.1 A3.8 3.8 0 0 0 3.7 -30.9Z"/><path class="pf" d="M-17 -94 Q-17 -98 -11 -99 Q-4 -101 3 -98 Q9 -97 9 -93 L5.8 -76 L9.6 -60 L-14.6 -60 L-13.8 -76 Z"/><path class="pf" d="M-14.1 -98.2 L-27.7 -114.8 A2.9 2.9 0 0 0 -32.3 -111.2 L-19.9 -93.8 A3.7 3.7 0 0 0 -14.1 -98.2Z"/><path class="pf" d="M-27.2 -113.5 L-30.9 -131.3 A2.1 2.1 0 0 0 -35.1 -130.7 L-32.8 -112.5 A2.8 2.8 0 0 0 -27.2 -113.5Z"/><ellipse class="pf" cx="-33" cy="-133.2" rx="3" ry="3.7"/><path class="pf" d="M-33.8 -134.8 L-35.2 -137.4 A0.6 0.6 0 0 0 -36.3 -136.8 L-35.1 -134.2 A0.8 0.8 0 0 0 -33.8 -134.8Z"/><path class="pf" d="M-32.7 -134.6 L-33.3 -138 A0.6 0.6 0 0 0 -34.5 -137.9 L-34.2 -134.4 A0.8 0.8 0 0 0 -32.7 -134.6Z"/><path class="pf" d="M-31.8 -134.4 L-31.5 -137.9 A0.6 0.6 0 0 0 -32.7 -138 L-33.3 -134.6 A0.8 0.8 0 0 0 -31.8 -134.4Z"/><path class="pf" d="M-30.9 -134.2 L-29.7 -136.8 A0.6 0.6 0 0 0 -30.8 -137.4 L-32.2 -134.8 A0.8 0.8 0 0 0 -30.9 -134.2Z"/><path class="pf" d="M-34.7 -133.1 L-37.2 -135.1 A0.7 0.7 0 0 0 -38 -134.1 L-35.7 -131.9 A0.8 0.8 0 0 0 -34.7 -133.1Z"/><path class="pf" d="M5.4 -94.1 L11.2 -75.3 A2.9 2.9 0 0 0 16.8 -76.7 L12.6 -95.9 A3.7 3.7 0 0 0 5.4 -94.1Z"/><path class="pf" d="M11.3 -75.3 L17 -56.5 A2.1 2.1 0 0 0 21 -57.5 L16.7 -76.7 A2.8 2.8 0 0 0 11.3 -75.3Z"/><ellipse class="pf" cx="-4" cy="-113" rx="7" ry="8.4" transform="rotate(0 -4 -113)"/><path class="pf" d="M-6.6 -106.6 L-7 -99.6 L-1 -99.6 L-1.4 -106.6 Z"/><path class="pd" d="M-4 -95 L-4 -70" stroke-width="1"/><circle class="pdot" cx="-2.4" cy="-90" r="0.9"/><circle class="pdot" cx="-2.4" cy="-83" r="0.9"/><circle class="pdot" cx="-2.4" cy="-76" r="0.9"/><circle class="pdot" cx="-2.4" cy="-74" r="0.9"/><path class="pd" d="M-14.6 -61 L9.6 -61" stroke-width="1.3"/><path class="pd" d="M-35.7 -127.3 L-29.3 -128.3" stroke-width="1.1"/><path class="pd" d="M14.9 -59.9 L21.3 -60.9" stroke-width="1.1"/><path class="pd" d="M-11.5 -36 L-12.6 -10" stroke-width="0.7"/><path class="pd" d="M7.5 -35 L8.6 -10" stroke-width="0.7"/><ellipse class="pf" cx="19.5" cy="-56" rx="3.6" ry="3.1"/><path class="pcane" d="M21.5 -56 L27 -3" stroke-width="2.6"/><path class="pcane" d="M14.5 -58.5 Q16 -64 21 -62.5 Q23.5 -61.2 21.5 -56" stroke-width="2.6"/><path class="pa-g" d="M-12.6 -116.8 Q-13.4 -124.6 -4.6 -125.4 Q4.4 -126 6.2 -119.6 L11.4 -117.4 Q11.6 -115.6 8.6 -115.6 L5.4 -116.6 Q-3.6 -119.2 -12.6 -116.8 Z"/><path class="pd" d="M-12 -118 Q-3.4 -120.4 5.6 -117.8" stroke-width="0.8"/><path class="pd" d="M-8.4 -112.8 h3.4 M-2.6 -112.8 h3.4 M-5 -112.8 h2.4" stroke-width="1"/><path class="pa-a" d="M-6.8 0 Q-6.4 -4.6 -11 -5 L-15.5 -4.2 Q-19.6 -3.2 -19.4 0 Z"/><path class="pd" d="M-7.4 -0.9 L-19 -0.9" stroke-width="0.9"/><path class="pa-a" d="M2.8 0 Q2.4 -4.6 7 -5 L11.5 -4.2 Q15.6 -3.2 15.4 0 Z"/><path class="pd" d="M3.4 -0.9 L15 -0.9" stroke-width="0.9"/></g></g></g>
+        <g transform="translate(410 346)"><g class="fig fig--2" tabindex="0" role="img" aria-label="Las ideas pequeñas también cuentan." data-msg="Las ideas pequeñas también cuentan."><rect class="fig-hit" x="-26" y="-96" width="52" height="96"/><g class="sway"><path class="pf" d="M-10.2 -36.6 L-11 -19.5 A4 4 0 0 0 -3 -18.5 L0.2 -35.4 A5.2 5.2 0 0 0 -10.2 -36.6Z"/><path class="pf" d="M-10.8 -19.2 L-10.7 -3.7 A2.7 2.7 0 0 0 -5.3 -3.3 L-3.2 -18.8 A3.8 3.8 0 0 0 -10.8 -19.2Z"/><path class="pf" d="M-0.2 -35.4 L3 -18.5 A4 4 0 0 0 11 -19.5 L10.2 -36.6 A5.2 5.2 0 0 0 -0.2 -35.4Z"/><path class="pf" d="M3.2 -18.8 L5.3 -3.3 A2.7 2.7 0 0 0 10.7 -3.7 L10.8 -19.2 A3.8 3.8 0 0 0 3.2 -18.8Z"/><path class="pf" d="M-10.5 -57.8 Q-10.5 -61 -5.3 -62 Q0 -64 5.3 -62 Q10.5 -61 10.5 -57.8 L7.3 -46 L10.6 -36 L-10.6 -36 L-7.3 -46 Z"/><path class="pf" d="M-7.4 -61 L-16.6 -73.6 A2.9 2.9 0 0 0 -21.4 -70.4 L-13.6 -57 A3.7 3.7 0 0 0 -7.4 -61Z"/><path class="pf" d="M-16.2 -71.6 L-14.9 -85.7 A2.1 2.1 0 0 0 -19.1 -86.3 L-21.8 -72.4 A2.8 2.8 0 0 0 -16.2 -71.6Z"/><ellipse class="pf" cx="-17" cy="-88.2" rx="3" ry="3.7"/><path class="pf" d="M-17.8 -89.8 L-19.2 -92.4 A0.6 0.6 0 0 0 -20.3 -91.8 L-19.1 -89.2 A0.8 0.8 0 0 0 -17.8 -89.8Z"/><path class="pf" d="M-16.7 -89.6 L-17.3 -93 A0.6 0.6 0 0 0 -18.5 -92.9 L-18.2 -89.4 A0.8 0.8 0 0 0 -16.7 -89.6Z"/><path class="pf" d="M-15.8 -89.4 L-15.5 -92.9 A0.6 0.6 0 0 0 -16.7 -93 L-17.3 -89.6 A0.8 0.8 0 0 0 -15.8 -89.4Z"/><path class="pf" d="M-14.9 -89.2 L-13.7 -91.8 A0.6 0.6 0 0 0 -14.8 -92.4 L-16.2 -89.8 A0.8 0.8 0 0 0 -14.9 -89.2Z"/><path class="pf" d="M-18.7 -88.1 L-21.2 -90.1 A0.7 0.7 0 0 0 -22 -89.1 L-19.7 -86.9 A0.8 0.8 0 0 0 -18.7 -88.1Z"/><path class="pf" d="M13.7 -57.1 L21.5 -71.5 A2.9 2.9 0 0 0 16.5 -74.5 L7.3 -60.9 A3.7 3.7 0 0 0 13.7 -57.1Z"/><path class="pf" d="M21.8 -73.2 L20.1 -87.1 A2.1 2.1 0 0 0 15.9 -86.9 L16.2 -72.8 A2.8 2.8 0 0 0 21.8 -73.2Z"/><ellipse class="pf" cx="18" cy="-89.2" rx="3" ry="3.7"/><path class="pf" d="M17.2 -90.8 L15.8 -93.4 A0.6 0.6 0 0 0 14.7 -92.8 L15.9 -90.2 A0.8 0.8 0 0 0 17.2 -90.8Z"/><path class="pf" d="M18.3 -90.6 L17.7 -94 A0.6 0.6 0 0 0 16.5 -93.9 L16.8 -90.4 A0.8 0.8 0 0 0 18.3 -90.6Z"/><path class="pf" d="M19.2 -90.4 L19.5 -93.9 A0.6 0.6 0 0 0 18.3 -94 L17.7 -90.6 A0.8 0.8 0 0 0 19.2 -90.4Z"/><path class="pf" d="M20.1 -90.2 L21.3 -92.8 A0.6 0.6 0 0 0 20.2 -93.4 L18.8 -90.8 A0.8 0.8 0 0 0 20.1 -90.2Z"/><path class="pf" d="M16.3 -89.1 L13.8 -91.1 A0.7 0.7 0 0 0 13 -90.1 L15.3 -87.9 A0.8 0.8 0 0 0 16.3 -89.1Z"/><ellipse class="pf" cx="0" cy="-74" rx="7.6" ry="8.4" transform="rotate(0 0 -74)"/><path class="pf" d="M-2.6 -67.6 L-3 -60.6 L3 -60.6 L2.6 -67.6 Z"/><path class="pd" d="M-17.6 -62.3 L-11 -67.4" stroke-width="1.2"/><path class="pd" d="M10.9 -67.7 L17.8 -62.9" stroke-width="1.2"/><path class="pd" d="M-4.2 -62.5 Q0 -57.6 4.2 -62.5" stroke-width="1.1"/><path class="pd" d="M-10.2 -39.5 L10.2 -39.5" stroke-width="1.1"/><path class="pd" d="M-11.3 -25 L-2.7 -25" stroke-width="1.2"/><path class="pd" d="M2.7 -25 L11.3 -25" stroke-width="1.2"/><path class="pf" d="M-7.4 -77 Q-8 -84.4 0 -84.8 Q8 -84.4 7.6 -77 Q4 -81 0 -80.6 Q-4 -81 -7.4 -77 Z"/><path class="pa-o" d="M-2.8 0 Q-2.4 -4.6 -7 -5 L-11.5 -4.2 Q-15.6 -3.2 -15.4 0 Z"/><path class="pd" d="M-3.4 -0.9 L-15 -0.9" stroke-width="0.9"/><path class="pa-o" d="M2.8 0 Q2.4 -4.6 7 -5 L11.5 -4.2 Q15.6 -3.2 15.4 0 Z"/><path class="pd" d="M3.4 -0.9 L15 -0.9" stroke-width="0.9"/></g></g></g>
+        <g transform="translate(500 346)"><g class="fig fig--3" tabindex="0" role="img" aria-label="Los sueños grandes empiezan cerca." data-msg="Los sueños grandes empiezan cerca."><rect class="fig-hit" x="-32" y="-152" width="72" height="152"/><g class="sway"><path class="pf" d="M-10.2 -63.8 L-13.5 -33.6 A4 4 0 0 0 -5.5 -32.4 L0.2 -62.2 A5.2 5.2 0 0 0 -10.2 -63.8Z"/><path class="pf" d="M-13.3 -33.1 L-12.7 -4 A2.7 2.7 0 0 0 -7.3 -4 L-5.7 -32.9 A3.8 3.8 0 0 0 -13.3 -33.1Z"/><path class="pf" d="M2.8 -62.4 L7.5 -32.5 A4 4 0 0 0 15.5 -33.5 L13.2 -63.6 A5.2 5.2 0 0 0 2.8 -62.4Z"/><path class="pf" d="M7.7 -33.1 L8.3 -4 A2.7 2.7 0 0 0 13.7 -4 L15.3 -32.9 A3.8 3.8 0 0 0 7.7 -33.1Z"/><path class="pf" d="M-12.5 -99.4 Q-12.5 -103 -6.9 -104 Q0.8 -106 8.4 -104 Q14 -103 14 -99.4 L10.8 -80 L13.6 -63 L-10.6 -63 L-9.3 -80 Z"/><path class="pf" d="M-9.4 -103 L-22.5 -122.5 A2.9 2.9 0 0 0 -27.5 -119.5 L-15.6 -99 A3.7 3.7 0 0 0 -9.4 -103Z"/><path class="pf" d="M-22.2 -120.7 L-20.9 -141.8 A2.1 2.1 0 0 0 -25.1 -142.2 L-27.8 -121.3 A2.8 2.8 0 0 0 -22.2 -120.7Z"/><ellipse class="pf" cx="-23" cy="-144.2" rx="3" ry="3.7"/><path class="pf" d="M-23.8 -145.8 L-25.2 -148.4 A0.6 0.6 0 0 0 -26.3 -147.8 L-25.1 -145.2 A0.8 0.8 0 0 0 -23.8 -145.8Z"/><path class="pf" d="M-22.7 -145.6 L-23.3 -149 A0.6 0.6 0 0 0 -24.5 -148.9 L-24.2 -145.4 A0.8 0.8 0 0 0 -22.7 -145.6Z"/><path class="pf" d="M-21.8 -145.4 L-21.5 -148.9 A0.6 0.6 0 0 0 -22.7 -149 L-23.3 -145.6 A0.8 0.8 0 0 0 -21.8 -145.4Z"/><path class="pf" d="M-20.9 -145.2 L-19.7 -147.8 A0.6 0.6 0 0 0 -20.8 -148.4 L-22.2 -145.8 A0.8 0.8 0 0 0 -20.9 -145.2Z"/><path class="pf" d="M-24.7 -144.1 L-27.2 -146.1 A0.7 0.7 0 0 0 -28 -145.1 L-25.7 -142.9 A0.8 0.8 0 0 0 -24.7 -144.1Z"/><path class="pf" d="M17 -98.8 L29.4 -117.3 A2.9 2.9 0 0 0 24.6 -120.7 L11 -103.2 A3.7 3.7 0 0 0 17 -98.8Z"/><path class="pf" d="M29.7 -118.2 L35 -137.4 A2.1 2.1 0 0 0 31 -138.6 L24.3 -119.8 A2.8 2.8 0 0 0 29.7 -118.2Z"/><ellipse class="pf" cx="33" cy="-140.2" rx="3" ry="3.7"/><path class="pf" d="M32.2 -141.8 L30.8 -144.4 A0.6 0.6 0 0 0 29.7 -143.8 L30.9 -141.2 A0.8 0.8 0 0 0 32.2 -141.8Z"/><path class="pf" d="M33.3 -141.6 L32.7 -145 A0.6 0.6 0 0 0 31.5 -144.9 L31.8 -141.4 A0.8 0.8 0 0 0 33.3 -141.6Z"/><path class="pf" d="M34.2 -141.4 L34.5 -144.9 A0.6 0.6 0 0 0 33.3 -145 L32.7 -141.6 A0.8 0.8 0 0 0 34.2 -141.4Z"/><path class="pf" d="M35.1 -141.2 L36.3 -143.8 A0.6 0.6 0 0 0 35.2 -144.4 L33.8 -141.8 A0.8 0.8 0 0 0 35.1 -141.2Z"/><path class="pf" d="M31.3 -140.1 L28.8 -142.1 A0.7 0.7 0 0 0 28 -141.1 L30.3 -138.9 A0.8 0.8 0 0 0 31.3 -140.1Z"/><ellipse class="pf" cx="2" cy="-118" rx="7" ry="8.6" transform="rotate(0 2 -118)"/><path class="pf" d="M-0.6 -111.4 L-1 -104.4 L5 -104.4 L4.6 -111.4 Z"/><path class="pd" d="M-21.6 -107.6 L-14.7 -112.4" stroke-width="1.2"/><path class="pd" d="M16.6 -111.7 L23.1 -106.5" stroke-width="1.2"/><path class="pd" d="M-2.2 -104.5 Q2 -99.6 6.2 -104.5" stroke-width="1.1"/><path class="pd" d="M-10.2 -66.5 L13.2 -66.5" stroke-width="1.1"/><path class="pd" d="M-8.6 -60 L-12.3 -33 L-11.9 -10" stroke-width="0.8"/><path class="pd" d="M-12.6 -10.5 L-7.4 -10.5" stroke-width="1"/><path class="pd" d="M11.6 -60 L14.3 -33 L12.9 -10" stroke-width="0.8"/><path class="pd" d="M8.4 -10.5 L13.6 -10.5" stroke-width="1"/><path class="pd" d="M-10 -61.5 L13 -61.5" stroke-width="0.9"/><path class="pf" d="M-5.2 -123 Q-4 -129 2.6 -128.4 Q9.6 -127.6 9.2 -120 Q6 -124.6 1 -124 Q-3 -123.6 -5.2 -123 Z"/><path class="pf" d="M7.4 -124 Q16 -125 19.4 -116 Q21 -109 17.6 -103 Q17.4 -110 13.6 -114 Q11 -117.6 7.6 -118 Z"/><circle class="pa-t" cx="8.2" cy="-123" r="2"/><path class="pa-t" d="M-4.8 0 Q-4.4 -4.6 -9 -5 L-13.5 -4.2 Q-17.6 -3.2 -17.4 0 Z"/><path class="pd" d="M-5.4 -0.9 L-17 -0.9" stroke-width="0.9"/><path class="pa-t" d="M5.8 0 Q5.4 -4.6 10 -5 L14.5 -4.2 Q18.6 -3.2 18.4 0 Z"/><path class="pd" d="M6.4 -0.9 L18 -0.9" stroke-width="0.9"/></g></g></g>
+        <g transform="translate(602 346)"><g class="fig fig--4" tabindex="0" role="img" aria-label="Tu energía contagia a todo el grupo." data-msg="Tu energía contagia a todo el grupo."><rect class="fig-hit" x="-38" y="-160" width="76" height="160"/><g class="sway"><path class="pf" d="M-12.7 -66.5 L-14.5 -35.4 A4 4 0 0 0 -6.5 -34.6 L-2.3 -65.5 A5.2 5.2 0 0 0 -12.7 -66.5Z"/><path class="pf" d="M-14.3 -35 L-13.2 -4 A2.7 2.7 0 0 0 -7.8 -4 L-6.7 -35 A3.8 3.8 0 0 0 -14.3 -35Z"/><path class="pf" d="M2.3 -65.5 L6.5 -34.6 A4 4 0 0 0 14.5 -35.4 L12.7 -66.5 A5.2 5.2 0 0 0 2.3 -65.5Z"/><path class="pf" d="M6.7 -35 L7.8 -4 A2.7 2.7 0 0 0 13.2 -4 L14.3 -35 A3.8 3.8 0 0 0 6.7 -35Z"/><path class="pf" d="M-15 -106 Q-15 -110 -9 -111 Q0 -113 9 -111 Q15 -110 15 -106 L11.8 -84 L13.1 -66 L-13.1 -66 L-11.8 -84 Z"/><path class="pf" d="M-12 -110.1 L-26.6 -129.7 A2.9 2.9 0 0 0 -31.4 -126.3 L-18 -105.9 A3.7 3.7 0 0 0 -12 -110.1Z"/><path class="pf" d="M-26.2 -128.3 L-28.9 -150.2 A2.1 2.1 0 0 0 -33.1 -149.8 L-31.8 -127.7 A2.8 2.8 0 0 0 -26.2 -128.3Z"/><ellipse class="pf" cx="-31" cy="-152.2" rx="3" ry="3.7"/><path class="pf" d="M-31.8 -153.8 L-33.2 -156.4 A0.6 0.6 0 0 0 -34.3 -155.8 L-33.1 -153.2 A0.8 0.8 0 0 0 -31.8 -153.8Z"/><path class="pf" d="M-30.7 -153.6 L-31.3 -157 A0.6 0.6 0 0 0 -32.5 -156.9 L-32.2 -153.4 A0.8 0.8 0 0 0 -30.7 -153.6Z"/><path class="pf" d="M-29.8 -153.4 L-29.5 -156.9 A0.6 0.6 0 0 0 -30.7 -157 L-31.3 -153.6 A0.8 0.8 0 0 0 -29.8 -153.4Z"/><path class="pf" d="M-28.9 -153.2 L-27.7 -155.8 A0.6 0.6 0 0 0 -28.8 -156.4 L-30.2 -153.8 A0.8 0.8 0 0 0 -28.9 -153.2Z"/><path class="pf" d="M-32.7 -152.1 L-35.2 -154.1 A0.7 0.7 0 0 0 -36 -153.1 L-33.7 -150.9 A0.8 0.8 0 0 0 -32.7 -152.1Z"/><path class="pf" d="M18.1 -105.9 L31.4 -127.4 A2.9 2.9 0 0 0 26.6 -130.6 L11.9 -110.1 A3.7 3.7 0 0 0 18.1 -105.9Z"/><path class="pf" d="M31.8 -128.6 L34.1 -150.7 A2.1 2.1 0 0 0 29.9 -151.3 L26.2 -129.4 A2.8 2.8 0 0 0 31.8 -128.6Z"/><ellipse class="pf" cx="32" cy="-153.2" rx="3" ry="3.7"/><path class="pf" d="M31.2 -154.8 L29.8 -157.4 A0.6 0.6 0 0 0 28.7 -156.8 L29.9 -154.2 A0.8 0.8 0 0 0 31.2 -154.8Z"/><path class="pf" d="M32.3 -154.6 L31.7 -158 A0.6 0.6 0 0 0 30.5 -157.9 L30.8 -154.4 A0.8 0.8 0 0 0 32.3 -154.6Z"/><path class="pf" d="M33.2 -154.4 L33.5 -157.9 A0.6 0.6 0 0 0 32.3 -158 L31.7 -154.6 A0.8 0.8 0 0 0 33.2 -154.4Z"/><path class="pf" d="M34.1 -154.2 L35.3 -156.8 A0.6 0.6 0 0 0 34.2 -157.4 L32.8 -154.8 A0.8 0.8 0 0 0 34.1 -154.2Z"/><path class="pf" d="M30.3 -153.1 L27.8 -155.1 A0.7 0.7 0 0 0 27 -154.1 L29.3 -151.9 A0.8 0.8 0 0 0 30.3 -153.1Z"/><ellipse class="pf" cx="0" cy="-126" rx="7.6" ry="9" transform="rotate(0 0 -126)"/><path class="pf" d="M-2.6 -119 L-3 -112 L3 -112 L2.6 -119 Z"/><path class="pd" d="M-24.6 -114.4 L-18 -119.6" stroke-width="1.2"/><path class="pd" d="M17.9 -119.9 L24.7 -115" stroke-width="1.2"/><path class="pd" d="M-4.2 -111.5 Q0 -106.6 4.2 -111.5" stroke-width="1.1"/><path class="pd" d="M-12.7 -69.5 L12.7 -69.5" stroke-width="1.1"/><path class="pd" d="M-11.1 -63 L-13.3 -35 L-12.4 -10" stroke-width="0.8"/><path class="pd" d="M-13.1 -10.5 L-7.9 -10.5" stroke-width="1"/><path class="pd" d="M11.1 -63 L13.3 -35 L12.4 -10" stroke-width="0.8"/><path class="pd" d="M7.9 -10.5 L13.1 -10.5" stroke-width="1"/><path class="pd" d="M-12.5 -64.5 L12.5 -64.5" stroke-width="0.9"/><path class="pa-o" d="M-7.8 -128.6 Q-7.6 -137.6 0 -137.8 Q7.8 -137.6 7.8 -128.8 Z"/><path class="pa-o" d="M2 -129.6 L15.6 -128.2 Q16.4 -126.2 14 -125.8 L2 -126.8 Z"/><path class="pd" d="M0 -137.4 L0 -129" stroke-width="0.8"/><path class="pd" d="M-9 -108.5 L-6.8 -86 M9 -108.5 L6.8 -86" stroke-width="1.6"/><path class="pa-a" d="M-5.3 0 Q-4.9 -4.6 -9.5 -5 L-14 -4.2 Q-18.1 -3.2 -17.9 0 Z"/><path class="pd" d="M-5.9 -0.9 L-17.5 -0.9" stroke-width="0.9"/><path class="pa-a" d="M5.3 0 Q4.9 -4.6 9.5 -5 L14 -4.2 Q18.1 -3.2 17.9 0 Z"/><path class="pd" d="M5.9 -0.9 L17.5 -0.9" stroke-width="0.9"/></g></g></g>
+        <g transform="translate(706 346)"><g class="fig fig--5" tabindex="0" role="img" aria-label="Un gesto amable cambia un día entero." data-msg="Un gesto amable cambia un día entero."><rect class="fig-hit" x="-34" y="-146" width="68" height="146"/><g class="sway"><path class="pf" d="M-10.9 -60 L-9.9 -25 A3.3 3.3 0 0 0 -3.3 -25 L-1.9 -60 A4.5 4.5 0 0 0 -10.9 -60Z"/><path class="pf" d="M-9.8 -25.1 L-9.2 -4 A2.2 2.2 0 0 0 -4.8 -4 L-3.4 -24.9 A3.2 3.2 0 0 0 -9.8 -25.1Z"/><path class="pf" d="M1.9 -60 L3.3 -25 A3.3 3.3 0 0 0 9.9 -25 L10.9 -60 A4.5 4.5 0 0 0 1.9 -60Z"/><path class="pf" d="M3.4 -24.9 L4.8 -4 A2.2 2.2 0 0 0 9.2 -4 L9.8 -25.1 A3.2 3.2 0 0 0 3.4 -24.9Z"/><path class="pf" d="M-13 -96.6 Q-13 -100 -7.6 -101 Q0 -103 7.6 -101 Q13 -100 13 -96.6 L9.8 -78 L12 -60 L-12 -60 L-9.8 -78 Z"/><path class="pf" d="M-9.9 -100 L-22.5 -118.5 A2.9 2.9 0 0 0 -27.5 -115.5 L-16.1 -96 A3.7 3.7 0 0 0 -9.9 -100Z"/><path class="pf" d="M-22.2 -117.4 L-25.9 -137.3 A2.1 2.1 0 0 0 -30.1 -136.7 L-27.8 -116.6 A2.8 2.8 0 0 0 -22.2 -117.4Z"/><ellipse class="pf" cx="-28" cy="-139.2" rx="3" ry="3.7"/><path class="pf" d="M-28.8 -140.8 L-30.2 -143.4 A0.6 0.6 0 0 0 -31.3 -142.8 L-30.1 -140.2 A0.8 0.8 0 0 0 -28.8 -140.8Z"/><path class="pf" d="M-27.7 -140.6 L-28.3 -144 A0.6 0.6 0 0 0 -29.5 -143.9 L-29.2 -140.4 A0.8 0.8 0 0 0 -27.7 -140.6Z"/><path class="pf" d="M-26.8 -140.4 L-26.5 -143.9 A0.6 0.6 0 0 0 -27.7 -144 L-28.3 -140.6 A0.8 0.8 0 0 0 -26.8 -140.4Z"/><path class="pf" d="M-25.9 -140.2 L-24.7 -142.8 A0.6 0.6 0 0 0 -25.8 -143.4 L-27.2 -140.8 A0.8 0.8 0 0 0 -25.9 -140.2Z"/><path class="pf" d="M-29.7 -139.1 L-32.2 -141.1 A0.7 0.7 0 0 0 -33 -140.1 L-30.7 -137.9 A0.8 0.8 0 0 0 -29.7 -139.1Z"/><path class="pf" d="M16.1 -95.9 L27.4 -114.4 A2.9 2.9 0 0 0 22.6 -117.6 L9.9 -100.1 A3.7 3.7 0 0 0 16.1 -95.9Z"/><path class="pf" d="M27.8 -115.7 L29.1 -135.8 A2.1 2.1 0 0 0 24.9 -136.2 L22.2 -116.3 A2.8 2.8 0 0 0 27.8 -115.7Z"/><ellipse class="pf" cx="27" cy="-138.2" rx="3" ry="3.7"/><path class="pf" d="M26.2 -139.8 L24.8 -142.4 A0.6 0.6 0 0 0 23.7 -141.8 L24.9 -139.2 A0.8 0.8 0 0 0 26.2 -139.8Z"/><path class="pf" d="M27.3 -139.6 L26.7 -143 A0.6 0.6 0 0 0 25.5 -142.9 L25.8 -139.4 A0.8 0.8 0 0 0 27.3 -139.6Z"/><path class="pf" d="M28.2 -139.4 L28.5 -142.9 A0.6 0.6 0 0 0 27.3 -143 L26.7 -139.6 A0.8 0.8 0 0 0 28.2 -139.4Z"/><path class="pf" d="M29.1 -139.2 L30.3 -141.8 A0.6 0.6 0 0 0 29.2 -142.4 L27.8 -139.8 A0.8 0.8 0 0 0 29.1 -139.2Z"/><path class="pf" d="M25.3 -138.1 L22.8 -140.1 A0.7 0.7 0 0 0 22 -139.1 L24.3 -136.9 A0.8 0.8 0 0 0 25.3 -138.1Z"/><ellipse class="pf" cx="0" cy="-115" rx="7" ry="8.4" transform="rotate(0 0 -115)"/><path class="pf" d="M-2.6 -108.6 L-3 -101.6 L3 -101.6 L2.6 -108.6 Z"/><path class="pf" d="M-9.8 -78 L9.8 -78 Q15 -59 19 -40 Q0 -37.5 -19 -40 Q-15 -59 -9.8 -78 Z"/><path class="pd" d="M-9.4 -77.4 L9.4 -77.4" stroke-width="1.4"/><path class="pd" d="M-3.9 -75 L-7.6 -41" stroke-width="0.8"/><path class="pd" d="M1 -75 L1.9 -41" stroke-width="0.8"/><path class="pd" d="M5.5 -75 L10.6 -41" stroke-width="0.8"/><path class="pd" d="M-4 -101.2 L0 -96 L4 -101.2" stroke-width="1.1"/><path class="pf" d="M-7.6 -116 Q-9.6 -127 0 -127.6 Q9.6 -127 7.8 -116 Q9.4 -106 7.2 -101 L4.6 -103 Q5.6 -112 3.6 -119 Q0 -121.6 -3.6 -119 Q-5.6 -112 -4.6 -103 L-7.4 -101 Q-9.6 -106 -7.6 -116 Z"/><path class="pa-g" d="M-5.6 -103.4 Q0 -100 5.6 -103.4 L5 -99.4 Q0 -96.6 -5 -99.4 Z"/><path class="pa-g" d="M2.6 -99 L5.4 -88 L1.6 -88.6 Z"/><path class="pa-g" d="M-1.8 0 Q-1.4 -4.6 -6 -5 L-10.5 -4.2 Q-14.6 -3.2 -14.4 0 Z"/><path class="pd" d="M-2.4 -0.9 L-14 -0.9" stroke-width="0.9"/><path class="pa-g" d="M1.8 0 Q1.4 -4.6 6 -5 L10.5 -4.2 Q14.6 -3.2 14.4 0 Z"/><path class="pd" d="M2.4 -0.9 L14 -0.9" stroke-width="0.9"/></g></g></g>
+        <g transform="translate(820 346)"><g class="fig fig--6" tabindex="0" role="img" aria-label="Ninguna barrera es más grande que las ganas." data-msg="Ninguna barrera es más grande que las ganas."><rect class="fig-hit" x="-36" y="-134" width="104" height="134"/><g class="sway"><path class="pf" d="M-6.3 -44.5 L27.7 -43.5 A4.5 4.5 0 0 0 28.3 -52.5 L-5.7 -55.5 A5.5 5.5 0 0 0 -6.3 -44.5Z"/><path class="pf" d="M24.2 -46.7 L37.3 -11.1 A2.8 2.8 0 0 0 42.7 -12.9 L31.8 -49.3 A4 4 0 0 0 24.2 -46.7Z"/><path class="pf" d="M-2.3 -41 L30.7 -39.8 A4.2 4.2 0 0 0 31.3 -48.2 L-1.7 -51 A5 5 0 0 0 -2.3 -41Z"/><path class="pf" d="M28 -41.7 L54.9 -8.4 A2.7 2.7 0 0 0 59.1 -11.6 L34 -46.3 A3.8 3.8 0 0 0 28 -41.7Z"/><path class="pf" d="M-17 -84 Q-17 -90 -12 -90.6 Q-4 -92 3.2 -90.6 Q8 -90 7.6 -84 L5 -64 L6.6 -46 L-15.6 -46 L-14.6 -64 Z"/><path class="pf" d="M-11.9 -86 L-24.5 -104.5 A2.9 2.9 0 0 0 -29.5 -101.5 L-18.1 -82 A3.7 3.7 0 0 0 -11.9 -86Z"/><path class="pf" d="M-24.2 -103.1 L-25.9 -124.1 A2.1 2.1 0 0 0 -30.1 -123.9 L-29.8 -102.9 A2.8 2.8 0 0 0 -24.2 -103.1Z"/><ellipse class="pf" cx="-28" cy="-126.2" rx="3" ry="3.7"/><path class="pf" d="M-28.8 -127.8 L-30.2 -130.4 A0.6 0.6 0 0 0 -31.3 -129.8 L-30.1 -127.2 A0.8 0.8 0 0 0 -28.8 -127.8Z"/><path class="pf" d="M-27.7 -127.6 L-28.3 -131 A0.6 0.6 0 0 0 -29.5 -130.9 L-29.2 -127.4 A0.8 0.8 0 0 0 -27.7 -127.6Z"/><path class="pf" d="M-26.8 -127.4 L-26.5 -130.9 A0.6 0.6 0 0 0 -27.7 -131 L-28.3 -127.6 A0.8 0.8 0 0 0 -26.8 -127.4Z"/><path class="pf" d="M-25.9 -127.2 L-24.7 -129.8 A0.6 0.6 0 0 0 -25.8 -130.4 L-27.2 -127.8 A0.8 0.8 0 0 0 -25.9 -127.2Z"/><path class="pf" d="M-29.7 -126.1 L-32.2 -128.1 A0.7 0.7 0 0 0 -33 -127.1 L-30.7 -124.9 A0.8 0.8 0 0 0 -29.7 -126.1Z"/><path class="pf" d="M9.2 -82.1 L20.5 -102.5 A2.9 2.9 0 0 0 15.5 -105.5 L2.8 -85.9 A3.7 3.7 0 0 0 9.2 -82.1Z"/><path class="pf" d="M20.7 -103.5 L24.1 -123.6 A2.1 2.1 0 0 0 19.9 -124.4 L15.3 -104.5 A2.8 2.8 0 0 0 20.7 -103.5Z"/><ellipse class="pf" cx="22" cy="-126.2" rx="3" ry="3.7"/><path class="pf" d="M21.2 -127.8 L19.8 -130.4 A0.6 0.6 0 0 0 18.7 -129.8 L19.9 -127.2 A0.8 0.8 0 0 0 21.2 -127.8Z"/><path class="pf" d="M22.3 -127.6 L21.7 -131 A0.6 0.6 0 0 0 20.5 -130.9 L20.8 -127.4 A0.8 0.8 0 0 0 22.3 -127.6Z"/><path class="pf" d="M23.2 -127.4 L23.5 -130.9 A0.6 0.6 0 0 0 22.3 -131 L21.7 -127.6 A0.8 0.8 0 0 0 23.2 -127.4Z"/><path class="pf" d="M24.1 -127.2 L25.3 -129.8 A0.6 0.6 0 0 0 24.2 -130.4 L22.8 -127.8 A0.8 0.8 0 0 0 24.1 -127.2Z"/><path class="pf" d="M20.3 -126.1 L17.8 -128.1 A0.7 0.7 0 0 0 17 -127.1 L19.3 -124.9 A0.8 0.8 0 0 0 20.3 -126.1Z"/><ellipse class="pf" cx="-4.6" cy="-101" rx="7.2" ry="8.6" transform="rotate(0 -4.6 -101)"/><path class="pf" d="M-7.2 -94.4 L-7.6 -87.4 L-1.6 -87.4 L-2 -94.4 Z"/><circle class="pf" cx="-9.6" cy="-106" r="3.6"/><circle class="pf" cx="-6" cy="-109.6" r="3.6"/><circle class="pf" cx="-1.6" cy="-109.4" r="3.6"/><circle class="pf" cx="2" cy="-106.4" r="3.6"/><circle class="pf" cx="-11" cy="-101.6" r="3.6"/><path class="pd" d="M-8.6 -91 Q-4.6 -86.6 -0.6 -91" stroke-width="1.1"/><path class="pd" d="M-15 -49.4 L6 -49.4" stroke-width="1.1"/><path class="pd" d="M-21.6 -92 L-17.4 -95.4 M10.2 -95.4 L14.4 -92" stroke-width="1.2"/><path class="pd" d="M1 -42.6 L28 -41 L37 -14" stroke-width="0.8"/><path class="pa-a" d="M34.8 -4.6 Q34.4 -9.2 39 -9.6 L43.5 -8.8 Q47.6 -7.8 47.4 -4.6 Z"/><path class="pd" d="M35.4 -5.5 L47 -5.5" stroke-width="0.9"/><path class="pa-a" d="M53.8 -4.8 Q53.4 -9.4 58 -9.8 L62.5 -9 Q66.6 -8 66.4 -4.8 Z"/><path class="pd" d="M54.4 -5.7 L66 -5.7" stroke-width="0.9"/><g class="chair"><circle cx="-5.1" cy="-31.4" r="28.9" stroke-width="3.7"/><circle cx="-5.1" cy="-31.4" r="24.3" stroke-width="1.5"/><line x1="-5.1" y1="-31.4" x2="19.2" y2="-31.4" stroke-width="1.0"/><line x1="-5.1" y1="-31.4" x2="12.1" y2="-14.2" stroke-width="1.0"/><line x1="-5.1" y1="-31.4" x2="-5.1" y2="-7.1" stroke-width="1.0"/><line x1="-5.1" y1="-31.4" x2="-22.3" y2="-14.2" stroke-width="1.0"/><line x1="-5.1" y1="-31.4" x2="-29.4" y2="-31.4" stroke-width="1.0"/><line x1="-5.1" y1="-31.4" x2="-22.3" y2="-48.5" stroke-width="1.0"/><line x1="-5.1" y1="-31.4" x2="-5.1" y2="-55.6" stroke-width="1.0"/><line x1="-5.1" y1="-31.4" x2="12.1" y2="-48.5" stroke-width="1.0"/><path d="M-18.7 -84.9 L-16.1 -43.3 L34.0 -43.3" stroke-width="3.4"/><path d="M-22.1 -84.9 L-34.0 -84.9" stroke-width="3.4"/><path d="M34.0 -43.3 L45.9 -6.0 L56.1 -6.0" stroke-width="3.4"/></g><g class="chair-f"><circle cx="-5.1" cy="-31.4" r="3.4"/><circle cx="51.0" cy="-4.8" r="5.1"/></g></g></g></g>
+      </g>
+    </svg>
+      <p class="fig-tip" id="fig-tip" role="status" aria-live="polite" hidden></p>
+      <span class="dot dot--blue" aria-hidden="true"></span>
+      <span class="dot dot--pink" aria-hidden="true"></span>
+      <span class="dot dot--sun" aria-hidden="true"></span>
+      <span class="dot dot--green" aria-hidden="true"></span>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="hero__eyebrow">Fundación sin fines de lucro · Desde 2017</p>
+          <h1 id="hero-titulo">
+            <span class="hero__name">Fundación Club de Jóvenes y Niños Horizontes</span>
+            <span class="hero__slogan"><span class="hero__slogan-a">Permítete ser una</span> <span class="hero__burst"><span class="c-1">explosión</span> <span class="c-2">de</span> <span class="c-3">color.</span></span></span>
+          </h1>
+          <p class="lead">
+            Desde 2017, la Fundación Club de Jóvenes y Niños Horizontes promueve oportunidades de desarrollo para
+            niños, niñas, adolescentes y sus familias en Barrio Lourdes, San Rafael de Alajuela, mediante actividades
+            formativas, recreativas y comunitarias.
+          </p>
+          <div class="cta-row" role="group" aria-label="Formas de colaborar">
+            <a class="btn btn--donate btn--lg" href="#donaciones">Donar</a>
+            <a class="btn btn--volunteer btn--lg" href="#voluntariado">Ser voluntario/a</a>
+          </div>
+          <div class="hero__links">
+            <a class="hero__visit" href="#como-trabajamos">
+              <span>Conoce nuestra labor</span>
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M4 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg>
+            </a>
+            <a class="hero__visit" href="#contacto">
+              <span>Ubicación y contacto</span>
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M4 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__logo-wrap">
+          <span class="hero__logo" data-logo></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MISIÓN Y VISIÓN ===================== -->
+    <section class="section section--white" id="mision-vision" aria-labelledby="mision-titulo">
+      <div class="container">
+        <h2 id="mision-titulo">Misión y visión</h2>
+
+        <div class="mv">
+          <article class="mv__card mv__card--mision" aria-labelledby="mision-h3">
+            <svg class="mv__icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+              <rect class="ico-bg" width="48" height="48"/>
+              <path class="ico-fg" d="M24 35s-9-5.9-9-12.2A5.3 5.3 0 0 1 24 19a5.3 5.3 0 0 1 9 3.8C33 29.1 24 35 24 35Z"/>
+            </svg>
+            <h3 id="mision-h3">Misión</h3>
+            <p>
+              Promover el desarrollo integral de niños, niñas y adolescentes en condición de vulnerabilidad social
+              mediante procesos socioeducativos, artísticos, recreativos y culturales que fortalezcan el aprendizaje,
+              la creatividad, el liderazgo y el bienestar emocional, con la participación de las familias y la comunidad.
+            </p>
+          </article>
+
+          <article class="mv__card mv__card--vision" aria-labelledby="vision-h3">
+            <svg class="mv__icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+              <rect class="ico-bg" width="48" height="48"/>
+              <circle class="ico-fg" cx="24" cy="24" r="6"/>
+              <path class="ico-stroke" d="M24 11v4M24 33v4M11 24h4M33 24h4M14.8 14.8l2.8 2.8M30.4 30.4l2.8 2.8M33.2 14.8l-2.8 2.8M17.6 30.4l-2.8 2.8" stroke-width="2.6" stroke-linecap="square" fill="none"/>
+            </svg>
+            <h3 id="vision-h3">Visión</h3>
+            <p>
+              Ser una fundación referente en Costa Rica por su contribución a la protección y al desarrollo integral
+              de niños, niñas y adolescentes, impulsando nuevas generaciones capaces de liderar iniciativas sociales,
+              culturales y ambientales.
+            </p>
+          </article>
+        </div>
+
+        <!-- Objetivo institucional y datos oficiales -->
+        <div class="keyfacts">
+          <div class="goal" id="meta">
+            <p class="goal__value" id="meta-valor" aria-hidden="false"></p>
+            <div>
+              <p class="goal__label">Meta institucional</p>
+              <h3 class="goal__title">Nuestro objetivo</h3>
+              <p id="meta-texto"></p>
+              <p class="goal__note small" id="meta-nota"></p>
+            </div>
+          </div>
+
+          <div class="legal-card">
+            <h3>Datos de la fundación</h3>
+            <dl>
+              <div><dt>Inicio de operaciones</dt><dd data-bind="org.foundedDateText"></dd></div>
+              <div><dt>Ubicación</dt><dd data-bind="org.locationText">Barrio Lourdes, San Rafael de Alajuela, Costa Rica</dd></div>
+              <div><dt>Cédula jurídica</dt><dd data-bind="org.legalId"></dd></div>
+              <div><dt>Fundador</dt><dd data-bind="org.founderName"></dd></div>
+              <div><dt>Lema</dt><dd data-bind="org.motto"></dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== NUESTRA HISTORIA ===================== -->
+    <section class="section section--lemon" id="historia" aria-labelledby="historia-titulo">
+      <div class="container">
+        <h2 id="historia-titulo">Nuestra historia</h2>
+
+        <div class="story">
+          <div class="story__text">
+            <p class="lead">
+              Todo comenzó el <strong data-bind="org.foundedDateText"></strong>, con 17 niños y niñas en
+              Barrio Lourdes, San Rafael de Alajuela.
+            </p>
+            <p>
+              La fundación nació en una comunidad con pocos espacios comunales y poco apoyo para la niñez y la
+              juventud. La idea era sencilla: abrir un lugar donde pudieran ser escuchados, aprender, crear y
+              convivir, y donde la comunidad también se fortaleciera.
+            </p>
+            <p>
+              Con los años, las alianzas con entidades gubernamentales y no gubernamentales hicieron posibles
+              clases de inglés, talleres artísticos y socioeducativos, giras educativas, siembras de árboles y
+              limpiezas comunitarias. La fundación también ayudó a consolidar el Parque Infantil “Los Sueños” y se
+              dio a conocer por sus actividades navideñas.
+            </p>
+            <p class="founder"><span data-bind="org.founderText"></span>.</p>
+          </div>
+
+          <div class="carousel story__photo" data-carousel role="region" aria-roledescription="carrusel" aria-label="Fotografías de actividades de la fundación">
+            <div class="carousel__viewport" tabindex="0">
+            <ul class="carousel__track">
+              <li class="carousel__slide" role="group" aria-roledescription="diapositiva" aria-label="1 de 8">
+                <figure>
+                  <img src="assets/fotos/actividad-grupo-al-aire-libre.jpg" width="1400" height="788" decoding="async" alt="Grupo de participantes sentados al aire libre, entre árboles, escuchando a una persona facilitadora">
+                  <figcaption>Participantes reunidos en el césped y en una banca, atentos a quien guía la conversación.</figcaption>
+                </figure>
+              </li>
+              <li class="carousel__slide" role="group" aria-roledescription="diapositiva" aria-label="2 de 8">
+                <figure>
+                  <img src="assets/fotos/actividad-certificados.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="Foto grupal de participantes y personas adultas en un salón; muchos sostienen certificados, frente a rótulos con el logo de la fundación">
+                  <figcaption>Participantes con sus certificados, frente a los rótulos de la fundación.</figcaption>
+                </figure>
+              </li>
+              <li class="carousel__slide" role="group" aria-roledescription="diapositiva" aria-label="3 de 8">
+                <figure>
+                  <img src="assets/fotos/actividad-gorro-navideno.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="Un participante sonriente con gorro navideño; al fondo, una banda de percusión en un parque">
+                  <figcaption>Un participante con gorro navideño, durante una actividad al aire libre con banda de percusión.</figcaption>
+                </figure>
+              </li>
+              <li class="carousel__slide" role="group" aria-roledescription="diapositiva" aria-label="4 de 8">
+                <figure>
+                  <img src="assets/fotos/actividad-jovenes-conversando.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="Jóvenes conversando y riendo al aire libre; unos de pie y otros sentados en bancas de madera">
+                  <figcaption>Jóvenes conversan y ríen sentados en bancas al aire libre.</figcaption>
+                </figure>
+              </li>
+              <li class="carousel__slide" role="group" aria-roledescription="diapositiva" aria-label="5 de 8">
+                <figure>
+                  <img src="assets/fotos/inicios-cancha-personajes.jpg" width="1280" height="960" loading="lazy" decoding="async" alt="Foto grupal numerosa de niñas, niños y jóvenes en una cancha techada, junto a dos personajes disfrazados de robots">
+                  <figcaption>Foto grupal en una cancha, con la visita de personajes disfrazados.</figcaption>
+                </figure>
+              </li>
+              <li class="carousel__slide" role="group" aria-roledescription="diapositiva" aria-label="6 de 8">
+                <figure>
+                  <img src="assets/fotos/inicios-camisetas-celestes.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="Grupo de niñas y niños con camisetas azul turquesa, posando juntos frente a una pared de lámina">
+                  <figcaption>Participantes con sus camisetas azul turquesa.</figcaption>
+                </figure>
+              </li>
+              <li class="carousel__slide" role="group" aria-roledescription="diapositiva" aria-label="7 de 8">
+                <figure>
+                  <img src="assets/fotos/inicios-selfi-jardin.jpg" width="1280" height="960" loading="lazy" decoding="async" alt="Una joven sonriente se toma una selfi junto a un grupo de niños y adolescentes con camisetas azul turquesa, en un jardín">
+                  <figcaption>Una selfi de grupo con camisetas azul turquesa, en un jardín.</figcaption>
+                </figure>
+              </li>
+              <li class="carousel__slide" role="group" aria-roledescription="diapositiva" aria-label="8 de 8">
+                <figure>
+                  <img src="assets/fotos/inicios-reunion-salon.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="Numeroso grupo de niñas, niños y jóvenes sentados en un salón, durante una reunión">
+                  <figcaption>Una reunión del grupo dentro del salón.</figcaption>
+                </figure>
+              </li>
+            </ul>
+            </div>
+            <div class="carousel__controls">
+              <button class="carousel__btn carousel__prev" type="button" aria-label="Foto anterior"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="square"/></svg></button>
+              <div class="carousel__dots" role="group" aria-label="Elegir foto"></div>
+              <button class="carousel__btn carousel__next" type="button" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="square"/></svg></button>
+              <button class="carousel__btn carousel__toggle" type="button" aria-label="Pausar el cambio automático"><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5v14M16 5v14" stroke="currentColor" stroke-width="3.2"/></svg><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 4.5v15l12-7.5Z" fill="currentColor"/></svg></button>
+            </div>
+          </div>
+        </div>
+
+        <ol class="timeline" aria-label="Línea de tiempo de la fundación">
+          <li class="timeline__item">
+            <p class="timeline__when">7 de marzo de 2017</p>
+            <h3>Nuestros inicios</h3>
+            <p>Comenzamos en Barrio Lourdes con 17 niños y niñas.</p>
+          </li>
+          <li class="timeline__item">
+            <p class="timeline__when">Con los años</p>
+            <h3>Alianzas y trayectoria</h3>
+            <p>Parque Infantil “Los Sueños”, campamento anual, talleres, giras, acciones comunales y actividades navideñas.</p>
+          </li>
+          <li class="timeline__item">
+            <p class="timeline__when">Hoy</p>
+            <h3>Una comunidad que crece</h3>
+            <p>Más de 190 niñas, niños y jóvenes vinculados a la fundación, según sus registros.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== CÓMO TRABAJAMOS ===================== -->
+    <section class="section section--white" id="como-trabajamos" aria-labelledby="como-titulo">
+      <div class="container">
+        <h2 id="como-titulo">Cómo trabajamos</h2>
+
+        <div class="how-top">
+          <div>
+            <p class="lead">
+              Nuestra metodología pone a niñas, niños y adolescentes en el centro: participan en la planificación
+              de las actividades, aprenden mediante talleres y avanzan acompañados por sus familias y la comunidad.
+            </p>
+            <p>
+              Creemos que, cuando existe un lugar donde expresarse, ser escuchado y formarse con amor y tolerancia,
+              las posibilidades de cambio se vuelven enormes. Ese trabajo se guía por cuatro principios.
+            </p>
+          </div>
+          <div class="carousel how-top__photo" data-carousel role="region" aria-roledescription="carrusel" aria-label="Fotografías de la forma de trabajo de la fundación">
+            <div class="carousel__viewport" tabindex="0">
+            <ul class="carousel__track">
+              <li class="carousel__slide" role="group" aria-roledescription="diapositiva" aria-label="1 de 10">
+                <figure>
+                  <img src="assets/fotos/taller-botellas.jpg" width="1280" height="960" decoding="async" alt="Niñas, niños y jóvenes sentados alrededor de una mesa de madera, al aire libre, trabajando con botellas en una actividad de taller; una persona joven de pie los acompaña">
+                  <figcaption>Trabajo manual con botellas alrededor de una mesa, al aire libre.</figcaption>
+                </figure>
+              </li>
+              <li class="carousel__slide" role="group" aria-roledescription="diapositiva" aria-label="2 de 10">
+                <figure>
+                  <img src="assets/fotos/dinamica-circulo-salon.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="Participantes de pie formando un círculo en un salón, tomados de una cuerda, mientras una persona facilitadora habla al centro">
+                  <figcaption>Dinámica en círculo dentro del salón, frente a los rótulos de los grupos.</figcaption>
+                </figure>
+              </li>
+              <li class="carousel__slide" role="group" aria-roledescription="diapositiva" aria-label="3 de 10">
+                <figure>
+                  <img src="assets/fotos/juego-cartones.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="Niñas, niños y jóvenes sentados sobre mantas en el césped con cartones de juego y antifaces de colores">
+                  <figcaption>Juego con cartones sobre mantas en el césped.</figcaption>
+                </figure>
+              </li>
+              <li class="carousel__slide" role="group" aria-roledescription="diapositiva" aria-label="4 de 10">
+                <figure>
+                  <img src="assets/fotos/grupo-mantas.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="Un pequeño grupo sentado sobre una manta en el césped, bajo los árboles, compartiendo una actividad">
+                  <figcaption>Un pequeño grupo comparte sobre mantas, bajo los árboles.</figcaption>
+                </figure>
+              </li>
+              <li class="carousel__slide" role="group" aria-roledescription="diapositiva" aria-label="5 de 10">
+                <figure>
+                  <img src="assets/fotos/juego-cesped.jpg" width="800" height="600" loading="lazy" decoding="async" alt="Participantes en movimiento durante un juego sobre el césped de un parque">
+                  <figcaption>Un juego en movimiento sobre el césped.</figcaption>
+                </figure>
+              </li>
+              <li class="carousel__slide" role="group" aria-roledescription="diapositiva" aria-label="6 de 10">
+                <figure>
+                  <img src="assets/fotos/taller-tarjetas-manta.jpg" width="1280" height="960" loading="lazy" decoding="async" alt="Grupo numeroso en un salón de madera; muchas personas sostienen tarjetas de colores con íconos y, al frente, despliegan una manta con mensajes escritos">
+                  <figcaption>Taller con tarjetas de colores y una manta con mensajes escritos por el grupo.</figcaption>
+                </figure>
+              </li>
+              <li class="carousel__slide" role="group" aria-roledescription="diapositiva" aria-label="7 de 10">
+                <figure>
+                  <img src="assets/fotos/taller-carteles-tierra.jpg" width="1400" height="787" loading="lazy" decoding="async" alt="Niñas, niños y jóvenes sostienen carteles pintados a mano con la Tierra, un árbol y una gota de agua">
+                  <figcaption>Carteles pintados a mano con la Tierra, un árbol y el agua.</figcaption>
+                </figure>
+              </li>
+              <li class="carousel__slide" role="group" aria-roledescription="diapositiva" aria-label="8 de 10">
+                <figure>
+                  <img src="assets/fotos/juego-cuerdas-pelota.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="Un grupo de participantes sujeta cuerdas atadas a una pelota naranja, en un juego de coordinación sobre el césped">
+                  <figcaption>Juego en equipo con cuerdas y una pelota, sobre el césped.</figcaption>
+                </figure>
+              </li>
+              <li class="carousel__slide" role="group" aria-roledescription="diapositiva" aria-label="9 de 10">
+                <figure>
+                  <img src="assets/fotos/dinamica-piso-corredor.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="Niñas, niños y jóvenes sentados y acostados en el piso de un corredor, con una persona sentada al fondo">
+                  <figcaption>Dinámica grupal en el piso de un corredor.</figcaption>
+                </figure>
+              </li>
+              <li class="carousel__slide" role="group" aria-roledescription="diapositiva" aria-label="10 de 10">
+                <figure>
+                  <img src="assets/fotos/juego-globos-agua.jpg" width="1280" height="960" loading="lazy" decoding="async" alt="Participantes jugando al aire libre, con globos de agua colgados de una estructura de metal">
+                  <figcaption>Juego con globos de agua al aire libre.</figcaption>
+                </figure>
+              </li>
+            </ul>
+            </div>
+            <div class="carousel__controls">
+              <button class="carousel__btn carousel__prev" type="button" aria-label="Foto anterior"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="square"/></svg></button>
+              <div class="carousel__dots" role="group" aria-label="Elegir foto"></div>
+              <button class="carousel__btn carousel__next" type="button" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="square"/></svg></button>
+              <button class="carousel__btn carousel__toggle" type="button" aria-label="Pausar el cambio automático"><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5v14M16 5v14" stroke="currentColor" stroke-width="3.2"/></svg><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 4.5v15l12-7.5Z" fill="currentColor"/></svg></button>
+            </div>
+          </div>
+        </div>
+
+        <p class="reveal-hint small muted">Pasa el cursor o toca cada tarjeta para ver más.</p>
+        <ul class="principles" aria-label="Principios de trabajo">
+          <li class="principle" data-reveal>
+            <span class="principle__num" aria-hidden="true">1</span>
+            <h3><button class="reveal__btn" type="button" aria-expanded="false" aria-controls="pr-1">Escucha activa<span class="pulse" aria-hidden="true"></span></button></h3>
+            <div class="reveal__body" id="pr-1"><div><p>Escuchar primero. Lo que hace falta se define junto a quien más lo vive: la propia niña, niño o adolescente.</p></div></div>
+          </li>
+          <li class="principle" data-reveal>
+            <span class="principle__num" aria-hidden="true">2</span>
+            <h3><button class="reveal__btn" type="button" aria-expanded="false" aria-controls="pr-2">Participación<span class="pulse" aria-hidden="true"></span></button></h3>
+            <div class="reveal__body" id="pr-2"><div><p>Cada participante tiene dónde decir lo que piensa, crear y proponer sin miedo, con oportunidades en igualdad para todas y todos.</p></div></div>
+          </li>
+          <li class="principle" data-reveal>
+            <span class="principle__num" aria-hidden="true">3</span>
+            <h3><button class="reveal__btn" type="button" aria-expanded="false" aria-controls="pr-3">Responsabilidad compartida<span class="pulse" aria-hidden="true"></span></button></h3>
+            <div class="reveal__body" id="pr-3"><div><p>Los participantes plantean los objetivos y metas del plan de trabajo anual, y las familias acompañan el proceso con comunicación constante.</p></div></div>
+          </li>
+          <li class="principle" data-reveal>
+            <span class="principle__num" aria-hidden="true">4</span>
+            <h3><button class="reveal__btn" type="button" aria-expanded="false" aria-controls="pr-4">Acción comunitaria<span class="pulse" aria-hidden="true"></span></button></h3>
+            <div class="reveal__body" id="pr-4"><div><p>Las ideas se vuelven hechos: talleres semanales y acciones de impacto social y comunal que, con el tiempo, transforman a cada persona y a la comunidad.</p></div></div>
+          </li>
+        </ul>
+
+        <h3 class="sub-title">Grupos de participación</h3>
+        <p class="narrow-text">
+          Niñas, niños y jóvenes participan en cuatro grupos activos, cada uno con sus propios temas.
+          Toca el rombo de cada grupo para conocer más.
+        </p>
+
+        <ul class="groups">
+          <li class="group group--minikids" data-acc>
+            <div class="group__head">
+              <span class="group__logo" data-group-logo="minikids" hidden></span>
+              <h3 id="g-minikids">MiniKids</h3>
+              <button class="diamond" type="button" data-toggle aria-expanded="false" aria-controls="g-minikids-panel" data-text-closed="Ver más" data-text-open="Cerrar">
+                <span class="diamond__shape" aria-hidden="true"></span>
+                <span class="diamond__text">Ver más</span>
+                <span class="visually-hidden"> sobre MiniKids</span>
+              </button>
+            </div>
+            <p class="group__summary">El grupo de las niñas y niños más pequeños de la fundación.</p>
+            <ul class="group__topics">
+              <li>Expresarse</li>
+              <li>Compartir</li>
+              <li>Desarrollar confianza</li>
+            </ul>
+            <div class="group__more" id="g-minikids-panel" data-panel>
+              <p>Un espacio pensado para su edad, con el mismo ambiente seguro, de escucha y cariño que caracteriza a toda la fundación.</p>
+              <p class="group__value">Por qué importa: empezar temprano en un lugar donde se sienten escuchados y acompañados.</p>
+            </div>
+          </li>
+
+          <li class="group group--kids" data-acc>
+            <div class="group__head">
+              <span class="group__logo" data-group-logo="kids" hidden></span>
+              <h3 id="g-kids">Kids</h3>
+              <button class="diamond" type="button" data-toggle aria-expanded="false" aria-controls="g-kids-panel" data-text-closed="Ver más" data-text-open="Cerrar">
+                <span class="diamond__shape" aria-hidden="true"></span>
+                <span class="diamond__text">Ver más</span>
+                <span class="visually-hidden"> sobre Kids</span>
+              </button>
+            </div>
+            <p class="group__summary">Los primeros pasos para convivir, moverse y conocer sus derechos.</p>
+            <ul class="group__topics">
+              <li>Valores</li>
+              <li>Habilidades motoras</li>
+              <li>Derechos y responsabilidades</li>
+            </ul>
+            <div class="group__more" id="g-kids-panel" data-panel>
+              <p>Se trabaja desde lo más cercano: los valores que guían la convivencia, el movimiento y la coordinación del cuerpo, y el conocimiento de los propios derechos y responsabilidades.</p>
+              <p class="group__value">Por qué importa: son las bases para convivir, cuidarse y participar.</p>
+            </div>
+          </li>
+
+          <li class="group group--legion" data-acc>
+            <div class="group__head">
+              <span class="group__logo" data-group-logo="legion" hidden></span>
+              <h3 id="g-legion">Legión</h3>
+              <button class="diamond" type="button" data-toggle aria-expanded="false" aria-controls="g-legion-panel" data-text-closed="Ver más" data-text-open="Cerrar">
+                <span class="diamond__shape" aria-hidden="true"></span>
+                <span class="diamond__text">Ver más</span>
+                <span class="visually-hidden"> sobre Legión</span>
+              </button>
+            </div>
+            <p class="group__summary">Confianza en sí mismos y fuerza como equipo.</p>
+            <ul class="group__topics">
+              <li>Autoestima</li>
+              <li>Responsabilidad</li>
+              <li>Compañerismo</li>
+              <li>Liderazgo</li>
+            </ul>
+            <div class="group__more" id="g-legion-panel" data-panel>
+              <p>El foco pasa de uno mismo al grupo: creer en las propias capacidades, hacerse cargo de lo que a cada quien le toca, cuidar a los compañeros y aprender a liderar y a trabajar en equipo.</p>
+              <p class="group__value">Por qué importa: quien se valora y se siente parte de un equipo se atreve a liderar.</p>
+            </div>
+          </li>
+
+          <li class="group group--clan" data-acc>
+            <div class="group__head">
+              <span class="group__logo" data-group-logo="clan" hidden></span>
+              <h3 id="g-clan">Clan</h3>
+              <button class="diamond" type="button" data-toggle aria-expanded="false" aria-controls="g-clan-panel" data-text-closed="Ver más" data-text-open="Cerrar">
+                <span class="diamond__shape" aria-hidden="true"></span>
+                <span class="diamond__text">Ver más</span>
+                <span class="visually-hidden"> sobre Clan</span>
+              </button>
+            </div>
+            <p class="group__summary">Reflexión sobre lo que la juventud vive a diario.</p>
+            <ul class="group__topics">
+              <li>Redes sociales</li>
+              <li>Prevención del consumo de sustancias</li>
+              <li>Igualdad de género</li>
+              <li>Toma de decisiones</li>
+            </ul>
+            <div class="group__more" id="g-clan-panel" data-panel>
+              <p>Espacios de conversación sobre situaciones reales de la vida joven: cómo usar las redes, cómo prevenir el consumo de sustancias, cómo construir relaciones igualitarias y qué habilidades hacen falta para tomar buenas decisiones.</p>
+              <p class="group__value">Por qué importa: tener dónde hablar de estos temas ayuda a elegir con criterio.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== QUÉ HACEMOS ===================== -->
+    <section class="section section--sky" id="que-hacemos" aria-labelledby="hacemos-titulo">
+      <div class="container">
+        <h2 id="hacemos-titulo">Qué hacemos</h2>
+        <p class="lead narrow-text">
+          Además del trabajo semanal con los grupos, la fundación desarrolla actividades para aprender, celebrar
+          y cuidar la comunidad junto a niñas, niños, adolescentes, familias y personas voluntarias.
+        </p>
+
+        <p class="reveal-hint reveal-hint--cats small muted">Pasa el cursor o toca cada tarjeta para ver más.</p>
+        <ul class="cats">
+          <li class="cat" style="--c: var(--turq)" data-reveal>
+            <svg class="act__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 20l1-4L16 5l3 3L8 19ZM13.5 7.5l3 3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" stroke-linejoin="miter"/></svg>
+            <h3><button class="reveal__btn" type="button" aria-expanded="false" aria-controls="cat-1">Formación socioeducativa y talleres<span class="pulse" aria-hidden="true"></span></button></h3>
+            <div class="reveal__body" id="cat-1"><div><p>Talleres semanales con cada grupo y talleres artísticos y socioeducativos que usan el arte y la educación para expresarse, aprender y descubrir la creatividad.</p></div></div>
+          </li>
+          <li class="cat" style="--c: var(--gold)" data-reveal>
+            <svg class="act__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 20h18M5 20V9l7-5 7 5v11M10 20v-6h4v6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" stroke-linejoin="miter"/></svg>
+            <h3><button class="reveal__btn" type="button" aria-expanded="false" aria-controls="cat-2">Actividades recreativas y comunitarias<span class="pulse" aria-hidden="true"></span></button></h3>
+            <div class="reveal__body" id="cat-2"><div><p>Juego, convivencia y celebraciones, como el aniversario de la fundación cada 7 de marzo, para reconocer lo recorrido junto a participantes, familias y comunidad.</p></div></div>
+          </li>
+          <li class="cat" style="--c: var(--green)" data-reveal>
+            <svg class="act__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21V11M12 11C12 6 8 4 4 4c0 4 2 7 8 7ZM12 14c0-4 3-6 8-6 0 4-2 6-8 6Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" stroke-linejoin="miter"/></svg>
+            <h3><button class="reveal__btn" type="button" aria-expanded="false" aria-controls="cat-3">Educación ambiental<span class="pulse" aria-hidden="true"></span></button></h3>
+            <div class="reveal__body" id="cat-3"><div><p>Giras ambientales, siembra de árboles y limpiezas comunitarias para conocer y cuidar el entorno natural y los espacios que compartimos.</p></div></div>
+          </li>
+          <li class="cat" style="--c: var(--orange)" data-reveal>
+            <svg class="act__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6L12 16.6 6.7 19.6l1.1-6L3.4 9.4l6-.8Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="miter"/></svg>
+            <h3><button class="reveal__btn" type="button" aria-expanded="false" aria-controls="cat-4">Encuentros familiares y actividades navideñas<span class="pulse" aria-hidden="true"></span></button></h3>
+            <div class="reveal__body" id="cat-4"><div><p>El Festival “Todos Somos Familia” y las campañas navideñas de recolección de regalos, que llegan a la comunidad y a otros espacios socialmente vulnerables.</p></div></div>
+          </li>
+          <li class="cat" style="--c: var(--cyan)" data-reveal>
+            <svg class="act__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 9l9-5 9 5-9 5Z M7 11.5V16c0 1.4 2.3 3 5 3s5-1.600 5-3v-4.500" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="miter"/></svg>
+            <h3><button class="reveal__btn" type="button" aria-expanded="false" aria-controls="cat-5">Campamentos y salidas educativas<span class="pulse" aria-hidden="true"></span></button></h3>
+            <div class="reveal__body" id="cat-5"><div><p>Un campamento anual para fortalecer habilidades como comunicarse, escuchar y liderar, y giras que llevan el aprendizaje más allá del barrio.</p></div></div>
+          </li>
+          <li class="cat" style="--c: var(--lime)" data-reveal>
+            <svg class="act__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="9" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="15" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>
+            <h3><button class="reveal__btn" type="button" aria-expanded="false" aria-controls="cat-6">Iniciativas mediante alianzas<span class="pulse" aria-hidden="true"></span></button></h3>
+            <div class="reveal__body" id="cat-6"><div><p>Con entidades gubernamentales y no gubernamentales impulsamos clases de inglés, talleres y giras que amplían las oportunidades de los participantes.</p></div></div>
+          </li>
+          <li class="cat" style="--c: var(--turq)" data-reveal>
+            <svg class="act__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="8" cy="7" r="2.6" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="16.5" cy="8.5" r="2.2" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M3 20v-3a5 5 0 0 1 10 0v3M13.5 20v-2.5a3.5 3.5 0 0 1 7 0V20" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>
+            <h3><button class="reveal__btn" type="button" aria-expanded="false" aria-controls="cat-7">Acompañamiento a las familias<span class="pulse" aria-hidden="true"></span></button></h3>
+            <div class="reveal__body" id="cat-7"><div><p>Comunicación constante y espacios de capacitación, consejo, academias de crianza y enlace comunal para que la familia sea parte del proceso.</p></div></div>
+          </li>
+          <li class="cat" style="--c: var(--orange)" data-reveal>
+            <svg class="act__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 10v4h4l9 5V5l-9 5ZM19.5 9.5v5M7 14l1.5 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" stroke-linejoin="miter"/></svg>
+            <h3><button class="reveal__btn" type="button" aria-expanded="false" aria-controls="cat-8">Liderazgo juvenil<span class="pulse" aria-hidden="true"></span></button></h3>
+            <div class="reveal__body" id="cat-8"><div><p>Espacios para que adolescentes y jóvenes propongan, organicen y lideren acciones con causas sociales, culturales y ambientales en su comunidad.</p></div></div>
+          </li>
+        </ul>
+
+        <div class="milestone">
+          <p class="milestone__label">Un logro de nuestra trayectoria</p>
+          <h3>Parque Infantil “Los Sueños”</h3>
+          <p>Un espacio recreativo que se consolidó gracias al trabajo de la fundación. Antes de él, niñas y niños no tenían un lugar de juego cerca de la zona.</p>
+        </div>
+
+        <p class="muted small cats-note">
+          Algunas actividades se realizan en fechas específicas del año y dependen de las alianzas y los recursos disponibles.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== CAMPAMENTOS (se llena desde siteData.js → camps; oculta si no hay fotos) ===================== -->
+    <section class="section section--lemon" id="campamentos" aria-labelledby="campamentos-titulo" hidden>
+      <span class="deco deco--a" aria-hidden="true"></span>
+      <span class="deco deco--b" aria-hidden="true"></span>
+      <div class="container">
+        <h2 id="campamentos-titulo">Campamentos</h2>
+        <p class="lead narrow-text">Algunos momentos de nuestros campamentos.</p>
+        <ul class="gallery" id="campamentos-lista"></ul>
+        <p class="gallery__more" id="campamentos-mas-wrap" hidden>
+          <button class="btn btn--outline" type="button" id="campamentos-mas">Ver más fotos</button>
+        </p>
+        <p class="muted small" id="campamentos-aviso"></p>
+      </div>
+    </section>
+
+    <!-- ===================== MOMENTOS (se llena desde siteData.js → gallery; oculta si no hay fotos) ===================== -->
+    <section class="section section--white" id="galeria" aria-labelledby="galeria-titulo" hidden>
+      <span class="deco deco--a" aria-hidden="true"></span>
+      <span class="deco deco--c" aria-hidden="true"></span>
+      <div class="container">
+        <h2 id="galeria-titulo">Momentos que compartimos</h2>
+        <p class="lead narrow-text">Risas, juegos y convivencia: así se vive el día a día en la fundación.</p>
+        <ul class="gallery" id="galeria-lista"></ul>
+        <p class="gallery__more" id="galeria-mas-wrap" hidden>
+          <button class="btn btn--outline" type="button" id="galeria-mas">Ver más fotos</button>
+        </p>
+        <p class="muted small" id="galeria-aviso"></p>
+      </div>
+    </section>
+
+    <dialog class="lightbox" id="visor" aria-label="Visor de fotos">
+      <figure class="lightbox__fig">
+        <img id="visor-img" alt="">
+        <figcaption id="visor-pie"></figcaption>
+      </figure>
+      <div class="lightbox__bar">
+        <button class="carousel__btn" type="button" id="visor-ant" aria-label="Foto anterior"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.600" stroke-linecap="square"/></svg></button>
+        <p class="lightbox__count" id="visor-cuenta" aria-live="polite"></p>
+        <button class="carousel__btn" type="button" id="visor-sig" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.600" stroke-linecap="square"/></svg></button>
+        <button class="carousel__btn lightbox__close" type="button" id="visor-cerrar" aria-label="Cerrar visor"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.600" stroke-linecap="square"/></svg></button>
+      </div>
+    </dialog>
+
+    <!-- ===================== NUESTRO IMPACTO ===================== -->
+    <section class="section section--sun" id="impacto" aria-labelledby="impacto-titulo">
+      <span class="deco deco--a" aria-hidden="true"></span>
+      <span class="deco deco--b" aria-hidden="true"></span>
+      <span class="deco deco--c" aria-hidden="true"></span>
+      <div class="container">
+        <h2 id="impacto-titulo">Nuestro impacto</h2>
+
+        <div class="impact-head">
+          <p class="impact-head__value" id="impacto-valor"></p>
+          <div>
+            <p class="impact-head__text" id="impacto-frase"></p>
+            <dl class="facts">
+              <div><dt>Qué mide</dt><dd id="impacto-mide"></dd></div>
+              <div><dt>Por qué importa</dt><dd id="impacto-porque"></dd></div>
+            </dl>
+            <p class="impact-head__note" id="impacto-nota"></p>
+          </div>
+        </div>
+
+        <h3 class="impact-sub">Otras cifras documentadas</h3>
+        <p class="reveal-hint small muted">Pasa el cursor o toca cada tarjeta para ver más.</p>
+        <ul class="stats" id="impacto-cifras"></ul>
+        <p class="impact-secondary-note" id="impacto-nota-cifras"></p>
+      </div>
+    </section>
+
+    <!-- ===================== DIRECTORES ===================== -->
+    <section class="section section--white" id="junta" aria-labelledby="junta-titulo">
+      <span class="deco deco--a" aria-hidden="true"></span>
+      <span class="deco deco--c" aria-hidden="true"></span>
+      <div class="container">
+        <h2 id="junta-titulo">Directores</h2>
+        <p class="lead narrow-text">
+          La fundación cuenta con cinco personas en su dirección. Aquí presentamos a quienes ya compartieron su
+          información; los retratos y los demás datos se irán sumando.
+        </p>
+        <p class="board__hint small muted" id="junta-ayuda" hidden>Toca o selecciona un retrato para ver el cargo o área de cada persona.</p>
+        <ul class="board" id="junta-lista"></ul>
+      </div>
+    </section>
+
+    <!-- ===================== ALIADOS (oculta hasta confirmar con la fundación) ===================== -->
+    <section class="section section--lemon" id="aliados" aria-labelledby="aliados-titulo" hidden>
+      <div class="container">
+        <h2 id="aliados-titulo">Aliados que nos acompañan</h2>
+        <ul class="allies" id="aliados-lista"></ul>
+      </div>
+    </section>
+
+    <!-- ===================== VOLUNTARIADO ===================== -->
+    <section class="section section--mint" id="voluntariado" aria-labelledby="voluntariado-titulo">
+      <div class="container">
+        <h2 id="voluntariado-titulo">Súmate como persona voluntaria</h2>
+        <p class="lead narrow-text">
+          Tu tiempo, tus ideas y tus conocimientos pueden ayudar a que más niñas, niños y adolescentes tengan un
+          lugar donde ser escuchados y crecer. Colaborar significa acompañarlos en un espacio seguro, desde el área
+          o la modalidad en la que puedas aportar.
+        </p>
+
+        <div class="cols-2">
+          <div class="panel panel--white">
+            <h3>Áreas en las que puedes colaborar</h3>
+            <ul class="chips" id="voluntariado-areas"></ul>
+          </div>
+          <div class="panel panel--white">
+            <h3>Trabajo comunal y prácticas</h3>
+            <ul class="item-list" id="voluntariado-academico"></ul>
+          </div>
+        </div>
+
+        <h3 class="sub-title">Cómo dar el siguiente paso</h3>
+        <ol class="steps">
+          <li class="step"><span class="step__num" aria-hidden="true">1</span><p><strong>Contacta</strong> a la fundación por WhatsApp o correo.</p></li>
+          <li class="step"><span class="step__num" aria-hidden="true">2</span><p><strong>Conversemos</strong> sobre tus intereses, tu perfil y tu disponibilidad.</p></li>
+          <li class="step"><span class="step__num" aria-hidden="true">3</span><p><strong>Coordinamos</strong> juntos las condiciones de tu participación.</p></li>
+        </ol>
+
+        <div class="volunteer-cta">
+          <div>
+            <h3>¿Quieres participar?</h3>
+            <p><strong id="voluntariado-edad"></strong></p>
+            <p>
+              Cada solicitud se atiende directamente con la fundación; escribir no garantiza una plaza ni un
+              horario determinado.
+            </p>
+          </div>
+          <div class="volunteer-cta__actions">
+            <a class="btn btn--wa btn--lg" id="voluntariado-wa" href="#contacto">Escribir por WhatsApp</a>
+            <a class="btn btn--outline" id="voluntariado-correo" href="#contacto">Escribir por correo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DONACIONES ===================== -->
+    <section class="section section--sky" id="donaciones" aria-labelledby="donaciones-titulo">
+      <div class="container">
+        <h2 id="donaciones-titulo">Donaciones</h2>
+
+        <div class="donate-layout">
+          <div class="donate-copy">
+            <p class="lead">
+              Cada sábado, en Barrio Lourdes, se abre un espacio donde niñas, niños y adolescentes pueden ser
+              escuchados, aprender, crear y sentirse parte de algo. Tu donación ayuda a que ese espacio siga abierto
+              y lleno de color.
+            </p>
+            <p>
+              Con tu aporte contribuyes a las actividades formativas, recreativas y comunitarias de la fundación:
+              talleres, encuentros, giras y celebraciones que, para muchos, son la oportunidad de descubrir todo lo
+              que pueden llegar a ser.
+            </p>
+
+            <ul class="why-give">
+              <li><strong>Sostienes un espacio seguro.</strong> Escucha, aprendizaje, recreación y formación para niñas, niños y adolescentes en vulnerabilidad social.</li>
+              <li><strong>Te sumas a un esfuerzo compartido.</strong> Trabajamos junto a familias, instituciones y personas voluntarias; tu aporte se une a ese camino.</li>
+              <li><strong>Donas sin presión.</strong> Hazlo solo si puedes y quieres. También puedes acompañarnos como <a href="#voluntariado">voluntario/a</a>.</li>
+            </ul>
+
+            <!-- FOTO GRUPAL (3.6): fotografía real entregada por el equipo (oct. 2026). Para cambiarla, reemplazar solo el src. -->
+            <figure class="photo donate-photo">
+              <img src="assets/fotos/actividad-regalos.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="Foto grupal numerosa bajo un techo de lámina; niñas, niños, jóvenes y personas adultas sostienen regalos envueltos">
+              <figcaption>Parte de la comunidad que hace posible la fundación.</figcaption>
+            </figure>
+          </div>
+
+          <div class="donate-card">
+            <div class="donate-widget" id="donaciones-widget">
+              <script type="module" src="https://donorbox.org/widgets.js" async></script><dbox-widget campaign="fundacion-club-de-jovenes-y-ninos-horizontes" type="donation_form" enable-auto-scroll="true"></dbox-widget>
+            </div>
+            <p class="donate-fees small muted" data-bind="donation.feesNote"></p>
+            <p class="donate-alt small">
+              ¿No ves el formulario?
+              <a id="donaciones-alterna" href="#donaciones" target="_blank" rel="noopener noreferrer">Abre la campaña en Donorbox<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== REDES SOCIALES =====================
+         Bloque oculto (hidden) hasta que haya al menos una URL válida en siteData → socials.
+         Se usa <aside> (no <section>) para no alterar la numeración ni los cortes diagonales de las secciones. -->
+    <aside class="social-band" id="redes" aria-labelledby="redes-titulo" hidden>
+      <div class="container">
+        <h2 class="social-band__title" id="redes-titulo">La comunidad también crece contigo</h2>
+        <p class="social-band__text">Síguenos en redes sociales y conoce nuestras actividades, proyectos y momentos compartidos con la comunidad.</p>
+        <ul class="social-band__list" id="redes-lista"></ul>
+      </div>
+    </aside>
+
+    <!-- ===================== UBICACIÓN Y CONTACTO ===================== -->
+    <section class="section section--blush" id="contacto" aria-labelledby="contacto-titulo">
+      <div class="container">
+        <h2 id="contacto-titulo">Ubicación y contacto</h2>
+        <p class="lead narrow-text">
+          Escríbenos para visitarnos, ser voluntario/a o resolver cualquier duda.
+        </p>
+
+        <div class="cols-2">
+          <div class="panel panel--white">
+            <h3>Dónde y cuándo</h3>
+            <address class="address">
+              <svg class="icon-inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.500 2.500 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5Z" fill="currentColor"/></svg>
+              <span data-bind="org.locationText"></span><br>
+              <span class="muted small">Coordenadas: <span data-bind="org.coordinatesText"></span></span>
+            </address>
+            <p><strong>Horario:</strong> <span data-bind="org.scheduleText"></span></p>
+            <p class="visit-note" data-bind="org.visitNote"></p>
+            <a class="btn btn--maps" data-href="org.mapsUrl" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.500 2.500 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5Z" fill="currentColor"/></svg>
+              Ver ubicación en Google Maps<span class="visually-hidden"> (se abre en una pestaña nueva)</span>
+            </a>
+          </div>
+
+          <div class="panel panel--white contact-card">
+            <h3>Contáctanos</h3>
+            <div id="contacto-personas"></div>
+
+            <div class="contact-actions">
+              <a class="btn btn--wa" id="contacto-wa" href="#contacto">Escribir por WhatsApp</a>
+              <a class="btn btn--mail" id="contacto-correo-btn" href="#contacto">Escribir por correo</a>
+            </div>
+            <p class="email-line small">Correo oficial: <a class="email-link" id="contacto-correo" href="#contacto"></a></p>
+
+            <div id="contacto-redes" hidden>
+              <h3 class="mt">Redes sociales</h3>
+              <ul class="social-list" id="contacto-redes-lista"></ul>
+            </div>
+          </div>
+        </div>
+
+        <p class="legal small muted">Cédula jurídica: <span data-bind="org.legalId"></span></p>
+
+        <noscript>
+          <p class="noscript-note">
+            Para ver todos los datos de contacto activa JavaScript. Mientras tanto, puedes llamar o escribir por
+            WhatsApp al 8821-3539 (Jeffrey Robles Pérez, fundador) o escribir a cjnh17@gmail.com.
+          </p>
+        </noscript>
+      </div>
+    </section>
+    </main>
+
+  <!-- ===================== PIE DE PÁGINA ===================== -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark" data-logo></span>
+        <div>
+          <p class="footer__name" data-bind="org.name"></p>
+          <p class="footer__small"><span data-bind="org.locationText"></span></p>
+          <p class="footer__small">Cédula jurídica <span data-bind="org.legalId"></span></p>
+        </div>
+      </div>
+
+      <nav aria-label="Pie de página">
+        <ul class="footer__links">
+          <li><a href="#mision-vision">Misión y visión</a></li>
+          <li><a href="#historia">Nuestra historia</a></li>
+          <li><a href="#que-hacemos">Qué hacemos</a></li>
+          <li><a href="#impacto">Nuestro impacto</a></li>
+          <li><a href="#voluntariado">Voluntariado</a></li>
+          <li><a href="#donaciones">Donaciones</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <p class="footer__privacy" id="pie-privacidad"></p>
+      <p class="footer__small">© <span id="pie-anio"></span> Fundación Club de Jóvenes y Niños Horizontes. <a href="#top">Volver arriba</a></p>
+    </div>
+  </footer>
+
+  <!-- Barra fija solo en móvil: ambos botones con la misma prioridad -->
+  <div class="cta-bar" role="group" aria-label="Formas de colaborar">
+    <a class="btn btn--donate" href="#donaciones">Donar</a>
+    <a class="btn btn--volunteer" href="#voluntariado">Ser voluntario/a</a>
+  </div>
+
+  <script src="siteData.js"></script>
+  <script src="script.js"></script>
+  <script src="redes.js"></script>
+  <script>
+    /* Si script.js no cargó o falló al inicio, el menú se muestra completo y sigue funcionando con anclas. */
+    if (!window.__cjnhReady) document.documentElement.classList.remove('js');
+  </script>
+</body>
+</html>
