@@ -188,80 +188,96 @@ const SITE_DATA = {
   },
 
   /* ------------------------------------------------------------------------
-     GALERÍA DE ACTIVIDADES
+     GALERÍA: "Campamentos y momentos que compartimos"
+     Una sola galería con las fotos de campamentos, convivencias, inicios y actividades.
      La fundación indicó (7 oct 2026) que cuenta con los permisos de los
      responsables para publicar fotos de participantes en actividades y
      reuniones del grupo. Por eso `consentConfirmed` está en true.
      La sección permanece OCULTA mientras `items` esté vacío.
-     Las fotos nuevas pueden guardarse en assets/galeria/ y agregarse al FINAL de `items` (si la foto es vertical, añadir `tall: true`).
-     REGLA: una foto no se repite en ninguna parte de la página (ni en carruseles, ni en Campamentos, ni en Donaciones).
-     Se ven en cuadrícula y se amplían al tocarlas.
+
+     ORDEN: las primeras `pageSize` fotos son las que se ven al entrar; el resto aparece
+     con el botón "Ver todas las fotos". Pon al principio las mejores fotos.
+     Las fotos nuevas pueden guardarse en assets/galeria/ (si la foto es vertical, añadir `tall: true`).
+     REGLA: una foto no se repite en ninguna parte de la página (ni en carruseles ni en Donaciones).
+     Se ven en cuadrícula, con su texto dentro de la foto, y se amplían al tocarlas.
 
      Para agregar una foto:
        { src: "assets/galeria/actividad-01.jpg",
          alt: "Descripción de la escena, SIN nombres (ej.: Grupo de participantes en una siembra de árboles)",
-         caption: "Texto opcional, SIN nombres ni datos identificables" }
+         caption: "Texto corto y cálido, SIN nombres ni datos identificables" }
 
      Reglas (ver README): nunca nombres en alt, caption ni nombre del archivo;
      solo fotos de actividades grupales; quitar la ubicación (GPS) de la foto
      antes de subirla; conservar las autorizaciones firmadas fuera del sitio.
-     Si algún responsable pide retirar una imagen, borrarla de `assets/galeria/`
+     Si algún responsable pide retirar una imagen, borrarla de `assets/`
      y de esta lista.
      ------------------------------------------------------------------------ */
   gallery: {
     consentConfirmed: true,
-    pageSize: 9,   // fotos visibles al inicio; el resto aparece con el botón "Ver más fotos"
-    items: [
-      { src: "assets/galeria/momentos-picnic-arboles.jpg",
-        alt: "Grupo de jóvenes sentados y recostados sobre una manta en un parque con árboles grandes, conversando y compartiendo",
-        caption: "Una tarde de convivencia bajo los árboles." },
-      { src: "assets/galeria/momentos-selfi-grupo.jpg", tall: true,
-        alt: "Selfi de un grupo numeroso de jóvenes sonriendo juntos",
-        caption: "Una selfi de grupo, con muchas sonrisas." },
-      { src: "assets/galeria/momentos-camisetas-cjnh.jpg",
-        alt: "Dos mujeres sonrientes abrazadas, con camisetas grises con el logo de CJNH, bajo un árbol",
-        caption: "Dos integrantes del equipo con la camiseta de la fundación." },
-      { src: "assets/galeria/momentos-selfi-amigas.jpg", tall: true,
-        alt: "Selfi de cuatro jóvenes sonrientes al aire libre, bajo un árbol",
-        caption: "Amistad y buen ánimo al aire libre." },
-      { src: "assets/galeria/momentos-piramide.jpg",
-        alt: "Jóvenes formando una pirámide humana sobre una cancha de césped sintético",
-        caption: "Una pirámide humana en la cancha." }
-    ],
-    noticeBefore: "Las fotografías se publican con autorización de los responsables de cada participante. Si deseas que retiremos una imagen, escríbenos por WhatsApp a "
-  },
-
-  /* Campamentos: misma estructura que `gallery` (sección "Campamentos"). Se oculta si `items` está vacío. */
-  camps: {
-    consentConfirmed: true,
-    pageSize: 9,
+    pageSize: 9,   // fotos visibles al inicio; el resto aparece con el botón "Ver todas las fotos"
     items: [
       { src: "assets/campamentos/campamento-banner-grupo.jpg",
         alt: "Foto grupal numerosa al aire libre, con un banner de la fundación al frente y montañas verdes al fondo",
-        caption: "Participantes de un campamento con el banner de la fundación." },
+        caption: "Todo el grupo reunido en un campamento, con el banner de la fundación." },
       { src: "assets/campamentos/campamento-paracaidas.jpg",
         alt: "Niñas y niños jugando con un paracaídas de colores sobre el césped, bajo los árboles",
-        caption: "Juego con paracaídas de colores." },
+        caption: "Todo el grupo jugando con el paracaídas de colores." },
+      { src: "assets/galeria/momentos-picnic-arboles.jpg",
+        alt: "Grupo de jóvenes sentados y recostados sobre una manta en un parque con árboles grandes, conversando y compartiendo",
+        caption: "Una tarde de convivencia bajo los árboles." },
       { src: "assets/campamentos/campamento-certificados.jpg",
         alt: "Grupo de niñas, niños y jóvenes sosteniendo certificados frente a una manta naranja decorada con huellas de manos",
-        caption: "Participantes con sus certificados, frente a una manta con huellas de manos." },
-      { src: "assets/campamentos/campamento-noche-luces.jpg", tall: true,
-        alt: "Un grupo de jóvenes con gafas y collares luminosos, de noche, posando divertidos",
-        caption: "Noche de campamento con luces y collares de colores." },
+        caption: "Participantes orgullosos con sus certificados del campamento." },
+      { src: "assets/galeria/inicios-juego-parque-1.jpg",
+        alt: "Jóvenes jugando en equipo al aire libre, bajo los árboles de un parque",
+        caption: "Juegos al aire libre, bajo los árboles." },
+      { src: "assets/galeria/campamento-kids-camp-tesoro.jpg",
+        alt: "Niñas, niños y jóvenes sosteniendo un cartel de bienvenida a un campamento con una búsqueda del tesoro, sobre el césped",
+        caption: "Bienvenida al Kids Camp: una búsqueda del tesoro." },
+      { src: "assets/galeria/momentos-piramide.jpg",
+        alt: "Jóvenes formando una pirámide humana sobre una cancha de césped sintético",
+        caption: "Una pirámide humana: confianza y trabajo en equipo." },
+      { src: "assets/galeria/momentos-camisetas-cjnh.jpg",
+        alt: "Dos mujeres sonrientes abrazadas, con camisetas grises con el logo de CJNH, bajo un árbol",
+        caption: "Dos integrantes del equipo con la camiseta de la fundación." },
+      { src: "assets/galeria/inicios-bus-grupo.jpg",
+        alt: "Grupo de niñas y niños posando junto a un bus",
+        caption: "Un grupo de niñas y niños posando junto a un bus." },
+      { src: "assets/galeria/momentos-selfi-grupo.jpg", tall: true,
+        alt: "Selfi de un grupo numeroso de jóvenes sonriendo juntos",
+        caption: "Una selfi de grupo, con muchas sonrisas." },
       { src: "assets/campamentos/campamento-noche-selfi.jpg", tall: true,
         alt: "Tres jóvenes se toman una selfi de noche, con gafas y anillos luminosos",
-        caption: "Jóvenes en una noche de fiesta con luces de colores." }
+        caption: "Una noche de campamento entre luces de colores." },
+      { src: "assets/galeria/momentos-selfi-amigas.jpg", tall: true,
+        alt: "Selfi de cuatro jóvenes sonrientes al aire libre, bajo un árbol",
+        caption: "Amistad y buen ánimo al aire libre." },
+      { src: "assets/campamentos/campamento-noche-luces.jpg", tall: true,
+        alt: "Un grupo de jóvenes con gafas y collares luminosos, de noche, posando divertidos",
+        caption: "Luces, gafas divertidas y mucha diversión de noche." },
+      { src: "assets/galeria/inicios-charla-circulo-1.jpg",
+        alt: "Niñas, niños y jóvenes sentados en círculo en un salón abierto, escuchando a un oficial de la Fuerza Pública",
+        caption: "Una charla en círculo con un oficial de la Fuerza Pública." },
+      { src: "assets/galeria/inicios-charla-circulo-2.jpg",
+        alt: "Grupo sentado en sillas dentro de un salón abierto, atento a un oficial de la Fuerza Pública que habla de pie",
+        caption: "Escuchando con atención durante una charla." },
+      { src: "assets/galeria/inicios-juego-parque-2.jpg",
+        alt: "Niñas, niños y jóvenes en un juego grupal sobre el césped, con una cinta amarilla en el suelo",
+        caption: "Un juego en equipo sobre el césped." },
+      { src: "assets/galeria/inicios-regalos-manos.jpg",
+        alt: "Bolsas de papel con tarjetas decoradas con manos de colores, sobre una mesa",
+        caption: "Bolsitas de regalo con tarjetas de manos de colores." }
     ],
     noticeBefore: "Las fotografías se publican con autorización de los responsables de cada participante. Si deseas que retiremos una imagen, escríbenos por WhatsApp a "
   },
-
 
   /* ------------------------------------------------------------------------
      JUNTA DIRECTIVA — cinco espacios
      PENDIENTE: nombres públicos completos, cargos y retratos autorizados.
      Para activar una tarjeta hay que completar TODO esto:
-       name:  "Nombre y apellidos públicos"
-       role:  "Cargo"
+       name:    "Nombre y apellidos públicos"
+       role:    "Cargo en la fundación (puede llevar varias funciones separadas por ·)"
+       profile: ["Profesión u ocupación", "Estudios o formación"]   // perfil profesional, se muestra aparte del cargo
        photo: "assets/junta/directivo-1.jpg"   (foto real entregada)
        photoAuthorized: true   ← solo cuando la persona autorizó publicar su retrato
      Mientras falte algo, la tarjeta se muestra discretamente como
@@ -270,10 +286,10 @@ const SITE_DATA = {
   board: {
     showIncompleteCards: true,
     members: [
-      { name: "Ilsy Janira Rodríguez Moncada", role: "Directora de Promoción", area: "Promotora social y trabajadora social", career: "Estudiante de Contaduría Pública", photo: "", photoAuthorized: false },  // Directivo/a 1 (tarjeta celeste) — retrato PENDIENTE (oct. 2026: se retiró; las fotos no se veían bien)
+      { name: "Ilsy Janira Rodríguez Moncada", role: "Directora de Promoción", profile: ["Promotora social y trabajadora social", "Estudiante de Contaduría Pública"], photo: "", photoAuthorized: false },  // Directivo/a 1 (tarjeta celeste) — retrato PENDIENTE (oct. 2026: se retiró; las fotos no se veían bien)
       { name: "", role: "", photo: "", photoAuthorized: false },  // Directivo/a 2 — PENDIENTE
-      { name: "Andrea Poveda", role: "Dirección General", area: "Trabajadora social y coordinadora de equipo", career: "Licenciatura en Trabajo Social con énfasis en Intervención Terapéutica", photo: "", photoAuthorized: false },  // Directivo/a 3 (tarjeta verde) — retrato PENDIENTE
-      { name: "Jeffrey Robles Pérez", role: "Fundador y Dirección General", area: "Representante legal", career: "Administrador de empresas y paramédico", photo: "", photoAuthorized: false },  // Directivo/a 4 (tarjeta azul) — retrato PENDIENTE
+      { name: "Andrea Poveda", role: "Dirección General · Coordinadora de equipo", profile: ["Trabajadora social", "Licenciatura en Trabajo Social con énfasis en Intervención Terapéutica"], photo: "", photoAuthorized: false },  // Directivo/a 3 (tarjeta verde) — retrato PENDIENTE
+      { name: "Jeffrey Robles Pérez", role: "Fundador y Dirección General · Representante legal", profile: ["Administrador de empresas y paramédico"], photo: "", photoAuthorized: false },  // Directivo/a 4 (tarjeta azul) — retrato PENDIENTE
       { name: "", role: "", photo: "", photoAuthorized: false }   // Directivo/a 5 — PENDIENTE
     ]
   },

@@ -271,9 +271,10 @@
     window.addEventListener("resize", function () { if (current) show(current); });
   }
 
-  /* ---------- Galerías: "Momentos" (D.gallery) y "Campamentos" (D.camps) ----------
-     Mosaico; cada foto se amplía en un visor (<dialog>) con flechas, teclado y deslizar, que recorre
-     solo las fotos de su propia galería. Se muestran `pageSize` fotos al inicio y el resto con "Ver más fotos".
+  /* ---------- Galería "Campamentos y momentos que compartimos" (D.gallery) ----------
+     Mosaico; cada foto se amplía en un visor (<dialog>) con flechas, teclado y deslizar.
+     Se muestran las mejores `pageSize` fotos al inicio y el resto con "Ver todas las fotos" (y "Ver menos").
+     El texto de cada foto se muestra dentro de la imagen, abajo.
      Las secciones permanecen ocultas si no hay fotos con permiso confirmado. */
   var viewer = null; // controlador único del visor
   function getViewer() {
@@ -323,13 +324,18 @@
 
     function live() { return entries.filter(function (e) { return e.li.isConnected; }); }
     var size = Math.max(1, G.pageSize || 9);
-    var shown = size;
     var more = byId(ids.more), moreWrap = byId(ids.moreWrap);
+    var expanded = false;
     function refresh() {
       var L = live();
       if (!L.length) { section.hidden = true; return; }
-      L.forEach(function (e, i) { e.li.hidden = i >= shown; });
-      if (moreWrap) moreWrap.hidden = L.length <= shown;
+      var limit = expanded ? L.length : size;
+      L.forEach(function (e, i) { e.li.hidden = i >= limit; });
+      if (moreWrap) moreWrap.hidden = L.length <= size;
+      if (more) {
+        more.textContent = expanded ? "Ver menos fotos" : "Ver todas las fotos";
+        more.setAttribute("aria-expanded", String(expanded));
+      }
     }
 
     G.items.forEach(function (item) {
@@ -362,11 +368,16 @@
     });
 
     if (more) more.addEventListener("click", function () {
-      var first = live()[shown];
-      shown += size;
+      var L = live();
+      var first = L[size];
+      expanded = !expanded;
       refresh();
-      var f = first && first.li.querySelector("button, img");
-      if (f && f.focus) f.focus({ preventScroll: true });
+      if (expanded) {
+        var f = first && first.li.querySelector("button, img");
+        if (f && f.focus) f.focus({ preventScroll: true });
+      } else {
+        section.scrollIntoView({ block: "start" });
+      }
     });
 
     var notice = byId(ids.notice);
@@ -383,7 +394,6 @@
   }
 
   function renderGallery() {
-    buildGallery(D.camps, { section: "campamentos", list: "campamentos-lista", more: "campamentos-mas", moreWrap: "campamentos-mas-wrap", notice: "campamentos-aviso" });
     buildGallery(D.gallery, { section: "galeria", list: "galeria-lista", more: "galeria-mas", moreWrap: "galeria-mas-wrap", notice: "galeria-aviso" });
   }
 
@@ -432,7 +442,7 @@
   /* ---------- Junta directiva ----------
      Tres estados, sin inventar nada:
        - Completa (nombre, cargo y retrato autorizado): el retrato es un botón; al pulsarlo (o al pasar el
-         cursor, solo como apoyo visual) se muestra debajo el cargo, área o carrera.
+         cursor, solo como apoyo visual) se muestran debajo el cargo en la fundación y el perfil profesional.
        - Con nombre y cargo pero sin retrato autorizado: se muestran el nombre y el dato profesional, sin
          retrato ni imagen simulada.
        - Sin datos: tarjeta discreta "Información próximamente" con un bloque geométrico (no una persona). */
@@ -442,7 +452,18 @@
 
   function hasText(m) { return !!(m.name && m.role); }
   function hasPhoto(m) { return !!(m.photo && m.photoAuthorized === true); }
-  function detailText(m) { return [m.role, m.area, m.career].filter(Boolean).join(" · "); }
+  // Cargo en la fundación (varias funciones se separan con " · ") y perfil profesional: se muestran por separado.
+  function roleLines(m) { return String(m.role || "").split(" · ").map(function (t) { return t.trim(); }).filter(Boolean); }
+  function profileLines(m) {
+    var p = Array.isArray(m.profile) ? m.profile : [m.area, m.career];
+    return p.filter(Boolean);
+  }
+  function infoBlock(kind, label, lines) {
+    var b = el("div", "board__block board__block--" + kind);
+    b.appendChild(lettered("p", "board__tag", label));
+    lines.forEach(function (t) { b.appendChild(lettered("p", "board__line", t)); });
+    return b;
+  }
 
   // Texto letra por letra: cada letra es un <span> decorativo y el texto completo queda
   // disponible para lectores de pantalla en un span oculto.
@@ -492,8 +513,11 @@
     letterIndex = 0;
     if (hasText(m)) {
       li.classList.add(hasPhoto(m) ? "is-complete" : "is-textonly");
+      cap.classList.add("board__caption--blocks");
       cap.appendChild(lettered("p", "board__name", m.name));
-      cap.appendChild(lettered("p", "board__role", detailText(m)));
+      cap.appendChild(infoBlock("role", "Cargo en la fundación", roleLines(m)));
+      var prof = profileLines(m);
+      if (prof.length) cap.appendChild(infoBlock("profile", "Perfil profesional", prof));
     } else {
       li.classList.add("is-pending");
       cap.appendChild(lettered("p", "board__pending", "Información próximamente"));
@@ -528,7 +552,7 @@
     var hint = byId("junta-ayuda");
     // La ayuda solo aplica si hay tarjetas con retrato (las demás ya muestran su texto).
     if (hint && interactive && list.querySelector(".is-complete")) {
-      hint.textContent = "Pasa el cursor o toca cada tarjeta para ver el nombre y la formación de cada persona.";
+      hint.textContent = "Pasa el cursor o toca cada tarjeta para ver el cargo y el perfil profesional de cada persona.";
       hint.hidden = false;
     }
   }

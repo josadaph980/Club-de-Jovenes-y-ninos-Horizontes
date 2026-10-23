@@ -15,8 +15,8 @@ Versión de este paquete: `vista-previa-cjnh_23` (octubre 2026), separada en arc
 | `redes.js` | Muestra la franja de redes sociales solo si hay URLs válidas en `siteData.js` → `socials`. |
 | `assets/logo-cjnh.png` | Logo de la fundación. |
 | `assets/fotos/` | Fotos de los carruseles (Nuestra historia y Cómo trabajamos) y de Donaciones. |
-| `assets/campamentos/` | Fotos de la sección Campamentos. |
-| `assets/galeria/` | Fotos de la sección Momentos que compartimos. |
+| `assets/campamentos/` | Fotos de campamentos (se muestran en la galería unificada). |
+| `assets/galeria/` | Fotos de la galería "Campamentos y momentos que compartimos". |
 | `assets/junta/` | (No existe por ahora.) Cuando lleguen los retratos de los directivos, crear esta carpeta y guardarlos ahí. |
 | `THIRD_PARTY_NOTICES.md` | Registro de material y servicios de terceros. |
 
@@ -32,13 +32,13 @@ Versión de este paquete: `vista-previa-cjnh_23` (octubre 2026), separada en arc
 En `siteData.js`. Las cifras se muestran como "más de …" y **no se suman entre sí**; cada una indica su período.
 
 ### Directores (cinco tarjetas; antes "Junta directiva", cambio pedido por la jefatura)
-En `siteData.js` → `board.members`. Hoy hay tres personas con nombre y cargo publicados (tarjetas 1, 3 y 4), **sin retrato** (se retiraron en oct. 2026 porque no se veían bien; quedan pendientes), y dos tarjetas en "Información próximamente" (2 y 5). Para mostrar un retrato: guardar la foto en `assets/junta/`, escribir su ruta en `photo` y poner `photoAuthorized: true`. Para activar una tarjeta nueva hay que completar `name`, `role` y, si se quiere retrato, `photo` y `photoAuthorized: true`. Opcionales: `area` y `career`. Al tocar o pulsar una tarjeta se ve su detalle.
+En `siteData.js` → `board.members`. Hoy hay tres personas con nombre y cargo publicados (tarjetas 1, 3 y 4), **sin retrato** (se retiraron en oct. 2026 porque no se veían bien; quedan pendientes), y dos tarjetas en "Información próximamente" (2 y 5). Para mostrar un retrato: guardar la foto en `assets/junta/`, escribir su ruta en `photo` y poner `photoAuthorized: true`. Para activar una tarjeta nueva hay que completar `name`, `role` y, si se quiere retrato, `photo` y `photoAuthorized: true`. El cargo va en `role` (varias funciones separadas por ` · `) y se muestra en el bloque azul **"Cargo en la fundación"**; la profesión y los estudios van en `profile` (lista de textos) y se muestran en el bloque naranja **"Perfil profesional"**. Al tocar o pulsar una tarjeta se ve su detalle.
 
-### Campamentos y galería de fotos
-Sección "Campamentos": `siteData.js` → `camps.items` (fotos en `assets/campamentos/`). Sección "Momentos que compartimos": `siteData.js` → `gallery.items` (fotos en `assets/galeria/`). **Una foto no se repite en ninguna parte de la página.** Para la galería:  Para agregar una foto: guardarla en `assets/fotos/` (sin nombres ni GPS), y añadir al final de la lista `{ src, alt, caption }` (descripción de la escena, sin nombres). Se ven en mosaico y se amplían al tocarlas; se muestran 9 al inicio y el resto con "Ver más fotos" (`pageSize`).
+### Galería "Campamentos y momentos que compartimos"
+Una sola galería: `siteData.js` → `gallery.items` (fotos en `assets/galeria/`, `assets/campamentos/` o `assets/fotos/`). **El orden importa**: las primeras `pageSize` fotos (9) son las que se ven al entrar, así que van primero las mejores; el resto aparece con el botón "Ver todas las fotos" (y "Ver menos fotos"). La primera foto se muestra más grande. **Una foto no se repite en ninguna parte de la página.** Para agregar una foto: guardarla (sin nombres ni GPS) y añadir `{ src, alt, caption }` (descripción de la escena, sin nombres; `caption` corto y cálido, que se ve dentro de la foto, abajo). Las fotos verticales llevan `tall: true`. Se amplían al tocarlas.
 
 ### Fotos de los carruseles
-Están escritas directamente en `index.html` (secciones "Nuestra historia" y "Cómo trabajamos"), con su texto alternativo y pie de foto. Para cambiar una, reemplazar el archivo en `assets/fotos/` (mismo nombre) o cambiar su `src`. Los carruseles avanzan cada 5 s, se pausan con el botón, y funcionan con flechas, puntos y teclado.
+Están escritas directamente en `index.html` (secciones "Nuestra historia" y "Cómo trabajamos"), con su texto alternativo y pie de foto (el pie se muestra dentro de la imagen, abajo). Para cambiar una, reemplazar el archivo en `assets/fotos/` (mismo nombre) o cambiar su `src`. Los carruseles avanzan cada 5 s, se pausan con el botón, y funcionan con flechas, puntos y teclado.
 
 ### Redes sociales
 Abrir `siteData.js`, buscar `socials` y pegar la URL oficial de cada perfil entre las comillas de `url` (Instagram, Facebook, TikTok). Las redes sin URL no aparecen y, si ninguna tiene, la franja "La comunidad también crece contigo" (antes de Contacto) permanece oculta. Solo se aceptan enlaces `https://` del dominio de cada red.

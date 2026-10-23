@@ -719,8 +719,13 @@ main:focus { outline: none; }
 .gallery__item:nth-child(6n+4) { --c: var(--green); } .gallery__item:nth-child(6n+5) { --c: var(--cyan); }
 .gallery__item:nth-child(6n+6) { --c: var(--lime); }
 .gallery__item[hidden] { display: none; }
-@media (min-width: 700px) { .gallery__item:nth-child(7n+1):not(.is-tall) { grid-column: span 2; } }
-.gallery figure { margin: 0; }
+/* La primera foto es la destacada: ocupa 2 columnas y 2 filas, y las demás se acomodan a su lado sin dejar huecos. */
+@media (min-width: 700px) {
+  .gallery__item:first-child:not(.is-tall) { grid-column: span 2; grid-row: span 2; }
+  .gallery__item:first-child:not(.is-tall) figure, .gallery__item:first-child:not(.is-tall) .gallery__btn { height: 100%; }
+  .gallery__item:first-child:not(.is-tall) img { height: 100%; aspect-ratio: auto; }
+}
+.gallery figure { position: relative; margin: 0; }
 .gallery__btn { display: block; width: 100%; padding: 0; font: inherit; color: inherit; background: none; border: 0; cursor: zoom-in; }
 .gallery__btn:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
 .gallery img {
@@ -729,11 +734,17 @@ main:focus { outline: none; }
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%);
   transition: filter var(--t-slow) var(--ease), transform var(--t-slow) var(--ease);
 }
-@media (min-width: 700px) { .gallery__item:nth-child(7n+1):not(.is-tall) img { aspect-ratio: 16 / 10; } }
 .gallery__item.is-tall img { aspect-ratio: 3 / 4; }
 .gallery__item.is-tall img { object-position: center 30%; }
 @media (hover: hover) { .gallery__btn:hover img { filter: saturate(1.1) brightness(1.03); transform: translate(-2px, -2px); } }
-.gallery figcaption { margin-top: 0.7rem; padding-left: 0.7rem; font-size: 0.92rem; color: var(--ink-soft); border-left: 4px solid var(--c); }
+/* El pie de foto va DENTRO de la imagen, abajo (la franja de color y el corte de la esquina quedan visibles). */
+.gallery figcaption {
+  position: absolute; left: 2px; right: 8px; bottom: 10px; margin: 0; padding: 2.2rem 0.75rem 0.6rem;
+  font-size: 0.88rem; font-weight: 700; line-height: 1.3; color: #fff; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  background: linear-gradient(to top, rgba(6, 22, 26, 0.88), rgba(6, 22, 26, 0.5) 60%, rgba(6, 22, 26, 0));
+  pointer-events: none; transition: transform var(--t-slow) var(--ease);
+}
+@media (hover: hover) { .gallery__item:hover figcaption { transform: translate(-2px, -2px); } }
 .gallery__more { margin: 1.6rem 0 0; text-align: center; }
 .gallery__more[hidden] { display: none; }
 
@@ -1030,12 +1041,19 @@ body { padding-bottom: 5.2rem; }
 .carousel__viewport:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 .carousel__track { display: flex; }
 .carousel__slide { flex: 0 0 100%; min-width: 0; scroll-snap-align: start; scroll-snap-stop: always; padding-right: 10px; }
-.carousel__slide figure { margin: 0; }
+.carousel__slide figure { position: relative; margin: 0; }
 .carousel__slide img {
   width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; background: var(--t-cyan);
   border: 2px solid var(--edge); border-radius: 2px; box-shadow: 8px 8px 0 var(--accent);
 }
-.carousel__slide figcaption { margin-top: 0.9rem; min-height: 2.8em; font-size: 0.92rem; color: var(--ink-soft); }
+.carousel__slide img { display: block; }
+/* El pie de foto va DENTRO de la imagen, abajo, sobre un degradado oscuro para que se lea bien. */
+.carousel__slide figcaption {
+  position: absolute; left: 2px; right: 2px; bottom: 2px; margin: 0; padding: 2.6rem 1rem 0.8rem;
+  font-size: 0.98rem; font-weight: 700; line-height: 1.35; color: #fff; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  background: linear-gradient(to top, rgba(6, 22, 26, 0.88), rgba(6, 22, 26, 0.55) 55%, rgba(6, 22, 26, 0));
+  pointer-events: none;
+}
 .carousel__controls { display: none; align-items: center; gap: 0.55rem; margin-top: 0.2rem; }
 .js .carousel.is-ready .carousel__controls { display: flex; }
 .carousel__btn {
@@ -1080,3 +1098,28 @@ body { padding-bottom: 5.2rem; }
 .social-band__list .btn[data-net="instagram"]:is(:hover, :focus-visible, :active) { background: linear-gradient(45deg, #833AB4, #C13584 55%, #E1306C); color: #ffffff; }
 .social-band__list .btn[data-net="facebook"]:is(:hover, :focus-visible, :active)  { background: #1565D8; color: #ffffff; }
 .social-band__list .btn[data-net="tiktok"]:is(:hover, :focus-visible, :active)    { background: #000000; color: #ffffff; }
+
+/* ---------- Junta directiva: cargo en la fundación y perfil profesional, en bloques distintos ---------- */
+.board__caption--blocks::before { display: none; }
+.board__block {
+  --k: var(--cyan); --k-text: var(--cyan-text); --k-tint: var(--t-cyan);
+  margin-top: 0.55rem; padding: 0.35rem 0.55rem 0.45rem; border-left: 4px solid transparent; background: transparent;
+  transition: border-color 0.42s var(--ease) 0.12s, background-color 0.42s var(--ease) 0.12s;
+}
+.board__block--profile { --k: var(--orange); --k-text: var(--orange-text); --k-tint: var(--t-orange); }
+.board__caption .board__tag {
+  margin: 0 0 0.15rem; font-size: 0.7rem; font-weight: 900; letter-spacing: 0.07em; text-transform: uppercase; color: var(--k-text);
+}
+.board__caption .board__line { margin: 0.05rem 0 0; font-size: 0.9rem; line-height: 1.3; color: var(--ink); }
+.board__block--role .board__line { font-weight: 800; }
+.board__block--profile .board__line { font-weight: 500; color: var(--ink-soft); }
+/* Se colorean en los mismos momentos en que aparece el texto. */
+.board__card.is-textonly .board__block, .board__card.is-open .board__block, .board__card:focus-visible .board__block {
+  border-left-color: var(--k); background: var(--k-tint); transition-delay: 0s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .board__card:hover .board__block { border-left-color: var(--k); background: var(--k-tint); transition-delay: 0s; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .board__block { border-left-color: var(--k); background: var(--k-tint); }
+}
